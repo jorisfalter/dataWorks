@@ -1,0 +1,163 @@
+/* Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    background-image: radial-gradient(circle, #eaeaea 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust spacing of dots */
+}
+
+/* Make nav float at the bottom */
+nav {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed for spacing from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 30px; /* Space between menu items */
+}
+
+.headerTitle {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: #fff;
+}
+
+.cta-button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Center and style the hero section */
+.hero {
+    height: 75vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    max-width: 50%;
+}
+
+.gold {
+    color: gold;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from the left */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+
+.hero p {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Banner styling */
+.banner-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #000;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-slide {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.banner-slide img {
+    height: 40px;
+}
+
+
