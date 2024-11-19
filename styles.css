@@ -91,6 +91,7 @@ header {
     border-radius: 30px;
     background-color: #fff;
     margin: 20px;
+    background-color: #f7f7f7;
 }
 
 /* Decorative shapes */
@@ -100,7 +101,7 @@ header {
     position: absolute;
     border-radius: 50%; /* Makes the shape circular */
     background-color: rgba(255, 215, 0, 0.2); /* Light gold color for a subtle look */
-    z-index: -1; /* Position behind the main content */
+    z-index: 1; /* Position behind the main content */
 }
 
 .hero::before {
