@@ -7,10 +7,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #333; /* not sure what this does */
     background-color: #f0f0f0;
     background-image: radial-gradient(circle, #c1b7b7 1px, transparent 1px);
     background-size: 20px 20px; /* Adjust spacing of dots */
+    /* border-radius: 30px; */
 }
 
 /* Make nav float at the bottom */
@@ -133,9 +134,9 @@ header {
 
 
 .hero h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     margin-bottom: 1rem;
-    max-width: 50%;
+    max-width: 60%;
 }
 
 /* Gold */
@@ -182,7 +183,7 @@ header {
 
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     color: #555;
     margin-bottom: 2rem;
 }
