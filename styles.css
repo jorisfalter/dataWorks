@@ -8,8 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #f7f7f7;
-    background-image: radial-gradient(circle, #eaeaea 1px, transparent 1px);
+    background-color: #f0f0f0;
+    background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px);
     background-size: 20px 20px; /* Adjust spacing of dots */
 }
 
@@ -27,6 +27,10 @@ nav {
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     gap: 30px; /* Space between menu items */
+}
+
+h1{
+    font-size:1.4em;
 }
 
 headertitle{
@@ -84,6 +88,9 @@ header {
     text-align: center;
     padding: 2rem;
     position: relative; /* Needed for positioning the pseudo-elements */
+    border-radius: 30px;
+    background-color: #fff;
+    margin: 20px;
 }
 
 /* Decorative shapes */
@@ -97,18 +104,19 @@ header {
 }
 
 .hero::before {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     top: 20%;
     left: 5%;
     animation: float 6s infinite ease-in-out;
 }
 
 .hero::after {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     bottom: 15%;
     right: 10%;
+    background-color: rgba(218, 165, 32, 0.2); /* Changed to a darker gold/brown shade */
     animation: float 6s infinite ease-in-out reverse;
 }
 
