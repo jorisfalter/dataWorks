@@ -8,11 +8,20 @@
 body {
     font-family: Arial, sans-serif;
     color: #333; /* not sure what this does */
+ 
+}
+
+.main-container {
+    border-radius: 20px;        /* adjust radius as needed */
+    margin: 20px;              /* adds some space around the container */
+    padding: 20px;             /* adds inner spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* optional: adds subtle shadow */
     background-color: #f0f0f0;
     background-image: radial-gradient(circle, #c1b7b7 1px, transparent 1px);
     background-size: 20px 20px; /* Adjust spacing of dots */
     /* border-radius: 30px; */
 }
+
 
 /* Make nav float at the bottom */
 nav {
@@ -203,6 +212,7 @@ footer {
     padding: 2rem;
     font-size: 0.9rem;
     color: #999;
+    background-color:white;
 }
 
 /* Banner styling */
@@ -245,5 +255,6 @@ headerTitle {
     color: #333;
     font-weight: 500;
 }
+
 
 
