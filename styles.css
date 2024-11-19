@@ -268,11 +268,11 @@ headerTitle {
         gap: 15px;  /* Reduced gap on mobile */
     }
 
-    nav {
+    /* nav { */
        /* padding: 8px 15px;  /* Smaller padding on mobile */
         /*gap: 15px;  /* Reduced gap */
         /*width: 90%;  /* Prevent nav from touching edges */
-    }
+    /* } */
 
     nav ul {
         gap: 10px;  /* Reduced gap */
