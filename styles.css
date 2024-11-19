@@ -143,9 +143,9 @@ header {
 
 
 .hero h2 {
-    font-size: 6rem;
+    font-size: clamp(2rem, 8vw, 6rem);  /* Responsive font size */
     margin-bottom: 1rem;
-    max-width: 60%;
+    max-width: 90%;  /* Increased from 60% for mobile */
 }
 
 /* Gold */
@@ -192,7 +192,7 @@ header {
 
 
 .hero p {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);  /* Responsive font size */
     color: #555;
     margin-bottom: 2rem;
 }
@@ -254,6 +254,28 @@ headerTitle {
     margin: 2rem 0 1rem;
     color: #333;
     font-weight: 500;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .banner-container {
+        width: 95%;  /* Wider on mobile */
+        border-radius: 25px;  /* Smaller radius on mobile */
+    }
+
+    .banner-slide {
+        gap: 15px;  /* Reduced gap on mobile */
+    }
+
+    nav {
+        padding: 8px 15px;  /* Smaller padding on mobile */
+        gap: 15px;  /* Reduced gap */
+        width: 90%;  /* Prevent nav from touching edges */
+    }
+
+    nav ul {
+        gap: 10px;  /* Reduced gap */
+    }
 }
 
 
