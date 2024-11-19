@@ -29,6 +29,13 @@ nav {
     gap: 30px; /* Space between menu items */
 }
 
+headertitle{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
 .headerTitle {
     font-size: 1.5rem;
     margin-right: 20px;
