@@ -269,9 +269,9 @@ headerTitle {
     }
 
     nav {
-        padding: 8px 15px;  /* Smaller padding on mobile */
-        gap: 15px;  /* Reduced gap */
-        width: 90%;  /* Prevent nav from touching edges */
+       /* padding: 8px 15px;  /* Smaller padding on mobile */
+        /*gap: 15px;  /* Reduced gap */
+        /*width: 90%;  /* Prevent nav from touching edges */
     }
 
     nav ul {
