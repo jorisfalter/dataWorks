@@ -143,7 +143,7 @@ header {
 
 
 .hero h2 {
-    font-size: clamp(2rem, 8vw, 6rem);  /* Responsive font size */
+    font-size: clamp(3rem, 8vw, 6rem);  /* Responsive font size */
     margin-bottom: 1rem;
     max-width: 90%;  /* Increased from 60% for mobile */
 }
