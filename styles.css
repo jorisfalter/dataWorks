@@ -218,4 +218,15 @@ footer {
     height: 40px;
 }
 
+.logo {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
+    margin-left: 10px;
+}
+
+headerTitle {
+    display: flex;
+    align-items: center;
+}
+
 
