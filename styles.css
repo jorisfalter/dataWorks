@@ -226,6 +226,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow:hidden;
 }
 
 .banner-slide {
@@ -276,6 +277,12 @@ headerTitle {
     nav ul {
         gap: 10px;  /* Reduced gap */
     }
+
+    /* Decorative shapes */
+.hero::before,
+.hero::after {
+    display:none;
+}
 }
 
 
