@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f0f0f0;
-    background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px);
+    background-image: radial-gradient(circle, #c1b7b7 1px, transparent 1px);
     background-size: 20px 20px; /* Adjust spacing of dots */
 }
 
@@ -88,10 +88,10 @@ header {
     text-align: center;
     padding: 2rem;
     position: relative; /* Needed for positioning the pseudo-elements */
-    border-radius: 30px;
-    background-color: #fff;
+    /* border-radius: 30px; */
+    /* background-color: #fff; */
     margin: 20px;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
 }
 
 /* Decorative shapes */
