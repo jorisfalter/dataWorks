@@ -237,4 +237,11 @@ headerTitle {
     align-items: center;
 }
 
+.as-seen-on {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
 
