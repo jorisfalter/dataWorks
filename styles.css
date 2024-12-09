@@ -112,6 +112,7 @@ header {
     border-radius: 50%; /* Makes the shape circular */
     background-color: rgba(255, 215, 0, 0.2); /* Light gold color for a subtle look */
     z-index: 1; /* Position behind the main content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Added shadow for sharper appearance */
 }
 
 .hero::before {
