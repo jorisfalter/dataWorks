@@ -241,6 +241,7 @@ footer {
 }
 
 .logo {
+    border-radius: 50%; /* Makes the logo round */
     height: 40px; /* Adjust size as needed */
     width: auto;
     margin-left: 10px;
