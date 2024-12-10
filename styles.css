@@ -166,7 +166,10 @@ header {
     left: -100%; /* Start from the left */
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    /* background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent); */
+    background: linear-gradient(120deg, transparent, rgba(240, 240, 240, 0.4), transparent); /*this is the rgb value for the background f0f0f0*/
+
+    
     animation: shine 2s infinite;
 }
 
@@ -179,6 +182,8 @@ header {
         left: 100%;
     }
 }
+
+
 
 /* Bounce effect for up and down movement */
 @keyframes bounce {
