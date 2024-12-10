@@ -92,7 +92,12 @@ header {
     overflow: hidden;
     transition-delay: 0.1s; /* Add a delay to the hover action */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Default subtle shadow */
+    position: relative; /* Needed for ripple positioning */
+
+    z-index: 1;
 }
+
+
 
 .cta-button:hover {
     background-color: #333; /* Change background color on hover*/
@@ -102,26 +107,36 @@ header {
 
 /* Add shine effect on hover */
 .cta-button::after {
-    /* content: '';
+    content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%; */
-    /* background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.5),
-        transparent
-    ); */
-    /* transition: all 0.3s ease;
-    transform: skewX(-25deg); */
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2); /* Light ripple color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 2s infinite;
+    z-index: -1; /* Ensures ripple is behind the text */
 }
 
 .cta-button:hover::after {
     left: 100%;
     /* transition: all 0.4s ease; /* Smooth shine animation */
     transition-delay: 0.1s; /* Delay shine effect to match button hover */
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 300px; /* Ripple expands beyond the button */
+        height: 300px;
+        opacity: 0; /* Fade out the ripple */
+    }
 }
 
 
