@@ -8,15 +8,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Sliding Banner
 document.addEventListener("DOMContentLoaded", function () {
   const bannerSlide = document.querySelector(".banner-slide");
   const clone = bannerSlide.cloneNode(true);
   bannerSlide.parentNode.appendChild(clone);
 
-  // Calculate the width of the original banner
-  const bannerWidth = bannerSlide.offsetWidth;
+  // Ensure smooth scrolling by wrapping the banner in an overflow-hidden container
+  const bannerContainer = document.querySelector(".banner-container");
 
-  // Add a small gap between the original and cloned banner
-  clone.style.marginLeft = "30px"; // Adjust this value as needed
+  // Set up the animation for sliding
+  const animationDuration = 10; // Duration in seconds
+  bannerSlide.style.animation = `slide ${animationDuration}s linear infinite`;
+  // clone.style.animation = `slide ${animationDuration}s linear infinite`;
+
+  // Set widths and ensure the elements align properly
+  const bannerWidth = bannerSlide.offsetWidth;
+  // clone.style.marginLeft = "0"; // Ensure no unnecessary gaps
 });
