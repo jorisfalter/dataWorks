@@ -10,18 +10,35 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const bannerSlide = document.querySelector(".banner-slide");
-  const clone = bannerSlide.cloneNode(true);
-  bannerSlide.parentNode.appendChild(clone);
-
-  // Ensure smooth scrolling by wrapping the banner in an overflow-hidden container
   const bannerContainer = document.querySelector(".banner-container");
+  const animationDuration = 10; // Duration for one full slide in seconds
 
-  // Set up the animation for sliding
-  const animationDuration = 10; // Duration in seconds
-  bannerSlide.style.animation = `slide ${animationDuration}s linear infinite`;
-  // clone.style.animation = `slide ${animationDuration}s linear infinite`;
+  // Clone the banner for seamless looping
+  function createClones() {
+    const clonesRequired =
+      Math.ceil(window.innerWidth / bannerSlide.offsetWidth) + 1;
+    const existingClones = document.querySelectorAll(
+      ".banner-slide.clone"
+    ).length;
 
-  // Set widths and ensure the elements align properly
-  const bannerWidth = bannerSlide.offsetWidth;
-  // clone.style.marginLeft = "0"; // Ensure no unnecessary gaps
+    if (existingClones < clonesRequired) {
+      const clone = bannerSlide.cloneNode(true);
+      clone.classList.add("clone");
+      bannerContainer.appendChild(clone);
+      bannerSlide.style.animation = `slide ${animationDuration}s linear infinite`;
+      clone.style.animation = `slide ${animationDuration}s linear infinite`;
+    }
+  }
+
+  // Start creating clones and add event listener to keep adding clones
+  createClones();
+  setInterval(createClones, 1000); // Check and create clones every second to ensure infinite scrolling
+
+  // Ensure smooth animation
+  const slides = document.querySelectorAll(
+    ".banner-slide, .banner-slide.clone"
+  );
+  slides.forEach((slide) => {
+    slide.style.animation = `slide ${animationDuration}s linear infinite`;
+  });
 });

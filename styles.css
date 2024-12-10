@@ -260,7 +260,7 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow:hidden;
     border-color: #333;
@@ -273,7 +273,7 @@ footer {
     /* gap: 30px; */
     align-items: center;
     justify-content: center;
-    animation: slide 10s linear infinite; /* Match the duration in JS */
+   /*  animation: slide 10s linear infinite; /* Match the duration in JS */
 
 }
 
@@ -303,6 +303,7 @@ footer {
         transform: translateX(-100%); /* Move to the left by 100% of its width */
     }
 }
+
 
 
 
