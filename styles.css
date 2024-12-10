@@ -86,7 +86,44 @@ header {
     padding: 0.75rem 1.5rem;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    position: relative;
+    overflow: hidden;
+    transition-delay: 0.1s; /* Add a delay to the hover action */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Default subtle shadow */
 }
+
+.cta-button:hover {
+    background-color: #333; /* Change background color on hover*/
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add a larger shadow on hover */
+}
+
+/* Add shine effect on hover */
+.cta-button::after {
+    /* content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%; */
+    /* background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    ); */
+    /* transition: all 0.3s ease;
+    transform: skewX(-25deg); */
+}
+
+.cta-button:hover::after {
+    left: 100%;
+    /* transition: all 0.4s ease; /* Smooth shine animation */
+    transition-delay: 0.1s; /* Delay shine effect to match button hover */
+}
+
 
 /* Center and style the hero section */
 .hero {
@@ -203,14 +240,7 @@ header {
     margin-bottom: 2rem;
 }
 
-.cta-button {
-    background-color: #000;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
+
 
 /* Footer styling */
 footer {
