@@ -93,6 +93,7 @@ header {
     transition-delay: 0.1s; /* Add a delay to the hover action */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Default subtle shadow */
     position: relative; /* Needed for ripple positioning */
+    min-height: 48px;
 
     z-index: 1;
 }
