@@ -368,7 +368,7 @@ headerTitle {
     padding: 4rem 2rem;
     background: #fff;
     border-radius: 20px;
-    margin: 2rem 20px;
+    margin: 8rem 20px 2rem; /* Increased top margin from 2rem to 4rem */
 }
 
 .case-studies h2 {
