@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Start creating clones and add event listener to keep adding clones
   createClones();
   setInterval(createClones, 1000); // Check and create clones every second to ensure infinite scrolling
+
+  handleServicesAnimation();
 });
 
 // Function to determine which section is currently in view
@@ -73,3 +75,36 @@ function updateActiveSection() {
 window.addEventListener("scroll", updateActiveSection);
 // Run once on page load
 document.addEventListener("DOMContentLoaded", updateActiveSection);
+
+// Add this function to handle the animations
+function handleServicesAnimation() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // Get all case study cards
+        const cards = document.querySelectorAll(".case-study");
+
+        if (entry.isIntersecting) {
+          // Add animation when scrolling into view
+          cards.forEach((card) => {
+            card.classList.add("animate");
+          });
+        } else {
+          // Remove animation when scrolling away
+          cards.forEach((card) => {
+            card.classList.remove("animate");
+          });
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: "-100px 0px -400px 0px", // Large negative bottom margin to trigger earlier
+    }
+  );
+
+  const servicesSection = document.querySelector("#services");
+  if (servicesSection) {
+    observer.observe(servicesSection);
+  }
+}
