@@ -31,3 +31,45 @@ document.addEventListener("DOMContentLoaded", function () {
   createClones();
   setInterval(createClones, 1000); // Check and create clones every second to ensure infinite scrolling
 });
+
+// Function to determine which section is currently in view
+function updateActiveSection() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("nav ul li a");
+  const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+  // First remove active class from all links
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  // Only add active class if we're actually in a section
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      const correspondingLink = document.querySelector(
+        `nav a[href="#${section.id}"]`
+      );
+      if (correspondingLink) {
+        correspondingLink.classList.add("active");
+      }
+    }
+  });
+
+  // If we're at the top of the page (with some buffer), don't highlight any nav items
+  if (window.scrollY < 100) {
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+  }
+}
+
+// Add scroll event listener
+window.addEventListener("scroll", updateActiveSection);
+// Run once on page load
+document.addEventListener("DOMContentLoaded", updateActiveSection);
