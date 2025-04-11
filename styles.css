@@ -101,6 +101,11 @@ nav ul li a:hover {
     text-decoration: none;  /* Remove the underline */
 }
 
+nav ul li a.active {
+    background-color: #FFD700;  /* Gold/yellow background */
+    color: #000;  /* Black text on yellow background */
+}
+
 header {
     display: flex;
     justify-content: space-between;
