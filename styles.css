@@ -37,6 +37,7 @@ nav {
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     gap: 30px; /* Space between menu items */
+    z-index: 1000; /* Add this to ensure nav stays on top */
 }
 
 h1{
@@ -282,6 +283,7 @@ footer {
     border-color: #333;
     border-style: solid;
     position: relative;
+    z-index: 1; /* Lower z-index than nav */
 }
 
 .banner-slide {
