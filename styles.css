@@ -63,11 +63,13 @@ headertitle{
     padding: 5px;
     border-radius: 50%;
     background: #fff;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease; /* Changed from transform to all */
 }
 
 .nav-logo:hover {
     transform: scale(1.1);
+    background-color: #FFD700; /* Gold/yellow color */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Optional: adds a subtle yellow glow */
 }
 
 .nav-logo-img {
@@ -88,10 +90,15 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    padding: 8px 16px;  /* Add padding for the background */
+    border-radius: 20px;  /* Rounded corners like in the image */
+    transition: all 0.2s ease;  /* Smooth transition */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #FFD700;  /* Gold/yellow background */
+    color: #000;  /* Black text on yellow background */
+    text-decoration: none;  /* Remove the underline */
 }
 
 header {
