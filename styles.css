@@ -540,6 +540,13 @@ headerTitle {
     color: #333;
 }
 
+.how-it-works h3 {
+    font-size: 1.5rem;  /* Slightly smaller than h2 */
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 400;
+}
+
 .how-it-works .subtitle {
     font-size: 1.25rem;
     color: #666;
