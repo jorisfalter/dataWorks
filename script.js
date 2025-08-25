@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(createClones, 1000); // Check and create clones every second to ensure infinite scrolling
 
   handleServicesAnimation();
+  handleHowItWorksAnimation();
 });
 
 // Function to determine which section is currently in view
@@ -106,5 +107,38 @@ function handleServicesAnimation() {
   const servicesSection = document.querySelector("#services");
   if (servicesSection) {
     observer.observe(servicesSection);
+  }
+}
+
+// Add this function to handle the How it Works section animations
+function handleHowItWorksAnimation() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // Get all step elements
+        const steps = document.querySelectorAll(".step");
+
+        if (entry.isIntersecting) {
+          // Add animation when scrolling into view
+          steps.forEach((step) => {
+            step.classList.add("animate");
+          });
+        } else {
+          // Remove animation when scrolling away
+          steps.forEach((step) => {
+            step.classList.remove("animate");
+          });
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+      rootMargin: "-50px 0px -200px 0px", // Trigger animation a bit before the section is fully visible
+    }
+  );
+
+  const howItWorksSection = document.querySelector("#HowItWorks");
+  if (howItWorksSection) {
+    observer.observe(howItWorksSection);
   }
 }
