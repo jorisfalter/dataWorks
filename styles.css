@@ -1101,3 +1101,138 @@ headerTitle {
 
 
 
+/* Pricing Section */
+.pricing {
+    padding: 6rem 2rem;
+    margin: 2rem 20px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pricing-header h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+.pricing-header .subtitle {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 520px) 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: #f7f7f7;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.benefit-icon {
+    font-size: 1.4rem;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.price-card {
+    background: #0a0a0a;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.price-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    background: #1f2937;
+    color: #e5e7eb;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+}
+
+.price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin: 0.25rem 0 1.25rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.per {
+    color: #9ca3af;
+}
+
+.includes {
+    background: #111827;
+    border-radius: 14px;
+    padding: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.includes-label {
+    display: inline-block;
+    background: #1f2937;
+    color: #d1d5db;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.includes-list {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.includes-list li::before {
+    content: '✓';
+    color: #34D399;
+    margin-right: 0.5rem;
+}
+
+.cta-button.full {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
