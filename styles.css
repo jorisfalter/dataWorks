@@ -1126,7 +1126,7 @@ headerTitle {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: 1fr minmax(300px, 520px) 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     align-items: stretch;
     max-width: 1200px;
@@ -1163,6 +1163,8 @@ headerTitle {
     padding: 2rem;
     position: relative;
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
 }
 
 .price-card-header {
@@ -1201,6 +1203,7 @@ headerTitle {
     border-radius: 14px;
     padding: 1rem;
     margin: 1rem 0 1.5rem;
+    flex-grow: 1;
 }
 
 .includes-label {
@@ -1217,7 +1220,7 @@ headerTitle {
     list-style: none;
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .includes-list li::before {
@@ -1229,6 +1232,7 @@ headerTitle {
 .cta-button.full {
     width: 100%;
     border-radius: 10px;
+    margin-top: auto;
 }
 
 @media screen and (max-width: 900px) {
