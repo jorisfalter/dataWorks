@@ -142,3 +142,27 @@ function handleHowItWorksAnimation() {
     observer.observe(howItWorksSection);
   }
 }
+
+// Random pill hover animation
+function animateRandomPill() {
+  const pills = document.querySelectorAll(".pill");
+  if (pills.length === 0) return;
+
+  // Remove active class from all pills
+  pills.forEach((pill) => pill.classList.remove("active-pill"));
+
+  // Select a random pill
+  const randomIndex = Math.floor(Math.random() * pills.length);
+  const randomPill = pills[randomIndex];
+
+  // Add active class
+  randomPill.classList.add("active-pill");
+
+  // Remove after 400ms (shorter than the interval to create a pulsing effect)
+  setTimeout(() => {
+    randomPill.classList.remove("active-pill");
+  }, 400);
+}
+
+// Start the animation
+setInterval(animateRandomPill, 1500);
