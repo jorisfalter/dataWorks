@@ -128,8 +128,10 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Default subtle shadow */
     position: relative; /* Needed for ripple positioning */
     min-height: 48px;
-
     z-index: 1;
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block; /* Make links behave like buttons */
+    text-align: center; /* Center text */
 }
 
 
