@@ -79,6 +79,12 @@ document.addEventListener("DOMContentLoaded", updateActiveSection);
 
 // Add this function to handle the animations
 function handleServicesAnimation() {
+  // Adjust rootMargin based on screen size
+  const isMobile = window.innerWidth <= 768;
+  const rootMargin = isMobile
+    ? "0px 0px -100px 0px" // Less restrictive for mobile
+    : "-100px 0px -400px 0px"; // Original for desktop
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -99,8 +105,8 @@ function handleServicesAnimation() {
       });
     },
     {
-      threshold: 0.2,
-      rootMargin: "-100px 0px -400px 0px", // Large negative bottom margin to trigger earlier
+      threshold: isMobile ? 0.1 : 0.2,
+      rootMargin: rootMargin,
     }
   );
 
@@ -112,6 +118,12 @@ function handleServicesAnimation() {
 
 // Add this function to handle the How it Works section animations
 function handleHowItWorksAnimation() {
+  // Adjust settings based on screen size
+  const isMobile = window.innerWidth <= 768;
+  const rootMargin = isMobile
+    ? "0px 0px -50px 0px" // Less restrictive for mobile
+    : "-50px 0px -200px 0px"; // Original for desktop
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -132,8 +144,8 @@ function handleHowItWorksAnimation() {
       });
     },
     {
-      threshold: 0.3,
-      rootMargin: "-50px 0px -200px 0px", // Trigger animation a bit before the section is fully visible
+      threshold: isMobile ? 0.1 : 0.3,
+      rootMargin: rootMargin,
     }
   );
 
