@@ -305,6 +305,103 @@ footer {
     background-color:white;
 }
 
+/* Landing page outro section */
+.page-outro {
+    padding: 5rem 2rem 7rem; /* extra bottom padding so it sits above fixed nav */
+    text-align: center;
+    min-height: 70vh; /* make the outro almost page filling on laptops */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.outro-cta-button {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.outro-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+.outro-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.outro-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.outro-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin: 0;
+}
+
+.outro-title .tm {
+    font-size: 1.2rem;
+    vertical-align: super;
+}
+
+.outro-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.outro-row {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.outro-row a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.outro-row a:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .page-outro {
+        padding: 4rem 1.5rem 7rem;
+        min-height: 60vh;
+    }
+
+    .outro-logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .outro-row {
+        gap: 1.5rem;
+    }
+}
+
 /* Banner styling */
 .banner-container {
     width: 80%;
