@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   handleServicesAnimation();
   handleHowItWorksAnimation();
+  setupServiceVideoHover();
 });
 
 // Function to determine which section is currently in view
@@ -178,3 +179,39 @@ function animateRandomPill() {
 
 // Start the animation
 setInterval(animateRandomPill, 1500);
+
+// Hover video for Knowledge Databases service card
+function setupServiceVideoHover() {
+  const container = document.querySelector(".case-study-image.has-video");
+  if (!container) return;
+
+  const video = container.querySelector(".service-video");
+  if (!video) return;
+
+  let hoverTimer = null;
+
+  const startHover = () => {
+    container.classList.add("video-active");
+    video.currentTime = 0;
+    video.loop = false;
+    video.play().catch(() => {});
+
+    hoverTimer = setTimeout(() => {
+      video.loop = true;
+    }, 3000); // after 3s of hover, allow looping
+  };
+
+  const endHover = () => {
+    container.classList.remove("video-active");
+    if (hoverTimer) {
+      clearTimeout(hoverTimer);
+      hoverTimer = null;
+    }
+    video.pause();
+    video.currentTime = 0;
+    video.loop = false;
+  };
+
+  container.addEventListener("mouseenter", startHover);
+  container.addEventListener("mouseleave", endHover);
+}
