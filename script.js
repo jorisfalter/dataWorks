@@ -11,6 +11,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 document.addEventListener("DOMContentLoaded", function () {
   const bannerSlide = document.querySelector(".banner-slide");
   const bannerContainer = document.querySelector(".banner-container");
+  const footerYearEl = document.getElementById("footer-year");
+
+  // Set dynamic footer year
+  if (footerYearEl) {
+    footerYearEl.textContent = new Date().getFullYear();
+  }
 
   // Clone the banner for seamless looping
   function createClones() {
