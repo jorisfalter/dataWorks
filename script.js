@@ -186,38 +186,39 @@ function animateRandomPill() {
 // Start the animation
 setInterval(animateRandomPill, 1500);
 
-// Hover video for Knowledge Databases service card
+// Hover video for service cards
 function setupServiceVideoHover() {
-  const container = document.querySelector(".case-study-image.has-video");
-  if (!container) return;
+  const containers = document.querySelectorAll(".case-study-image.has-video");
 
-  const video = container.querySelector(".service-video");
-  if (!video) return;
+  containers.forEach((container) => {
+    const video = container.querySelector(".service-video");
+    if (!video) return;
 
-  let hoverTimer = null;
+    let hoverTimer = null;
 
-  const startHover = () => {
-    container.classList.add("video-active");
-    video.currentTime = 0;
-    video.loop = false;
-    video.play().catch(() => {});
+    const startHover = () => {
+      container.classList.add("video-active");
+      video.currentTime = 0;
+      video.loop = false;
+      video.play().catch(() => {});
 
-    hoverTimer = setTimeout(() => {
-      video.loop = true;
-    }, 3000); // after 3s of hover, allow looping
-  };
+      hoverTimer = setTimeout(() => {
+        video.loop = true;
+      }, 3000);
+    };
 
-  const endHover = () => {
-    container.classList.remove("video-active");
-    if (hoverTimer) {
-      clearTimeout(hoverTimer);
-      hoverTimer = null;
-    }
-    video.pause();
-    video.currentTime = 0;
-    video.loop = false;
-  };
+    const endHover = () => {
+      container.classList.remove("video-active");
+      if (hoverTimer) {
+        clearTimeout(hoverTimer);
+        hoverTimer = null;
+      }
+      video.pause();
+      video.currentTime = 0;
+      video.loop = false;
+    };
 
-  container.addEventListener("mouseenter", startHover);
-  container.addEventListener("mouseleave", endHover);
+    container.addEventListener("mouseenter", startHover);
+    container.addEventListener("mouseleave", endHover);
+  });
 }
