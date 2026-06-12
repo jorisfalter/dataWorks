@@ -200,18 +200,27 @@ function setupServiceVideoHover() {
     if (!video) return;
 
     let hoverTimer = null;
+    let isActive = false;
+    const hoverTarget = container.closest(".case-study") || container;
 
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
+    video.preload = "auto";
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
+    video.setAttribute("preload", "auto");
 
     const startHover = () => {
+      if (isActive) return;
+      isActive = true;
       container.classList.add("video-active");
       video.currentTime = 0;
       video.loop = false;
+      if (video.networkState === HTMLMediaElement.NETWORK_EMPTY) {
+        video.load();
+      }
       video.play().catch(() => {});
 
       hoverTimer = setTimeout(() => {
@@ -220,6 +229,7 @@ function setupServiceVideoHover() {
     };
 
     const endHover = () => {
+      isActive = false;
       container.classList.remove("video-active");
       if (hoverTimer) {
         clearTimeout(hoverTimer);
@@ -230,8 +240,10 @@ function setupServiceVideoHover() {
       video.loop = false;
     };
 
-    container.addEventListener("mouseenter", startHover);
-    container.addEventListener("mouseleave", endHover);
+    hoverTarget.addEventListener("pointerenter", startHover);
+    hoverTarget.addEventListener("pointerleave", endHover);
+    hoverTarget.addEventListener("mouseenter", startHover);
+    hoverTarget.addEventListener("mouseleave", endHover);
   });
 
   if (!isTouchDevice || prefersReducedMotion) return;
