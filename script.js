@@ -189,12 +189,24 @@ setInterval(animateRandomPill, 1500);
 // Hover video for service cards
 function setupServiceVideoHover() {
   const containers = document.querySelectorAll(".case-study-image.has-video");
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)")
+    .matches;
 
   containers.forEach((container) => {
     const video = container.querySelector(".service-video");
     if (!video) return;
 
     let hoverTimer = null;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
 
     const startHover = () => {
       container.classList.add("video-active");
@@ -221,4 +233,31 @@ function setupServiceVideoHover() {
     container.addEventListener("mouseenter", startHover);
     container.addEventListener("mouseleave", endHover);
   });
+
+  if (!isTouchDevice || prefersReducedMotion) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const container = entry.target;
+        const video = container.querySelector(".service-video");
+        if (!video) return;
+
+        if (entry.isIntersecting) {
+          container.classList.add("video-active");
+          video.loop = true;
+          video.play().catch(() => {});
+        } else {
+          container.classList.remove("video-active");
+          video.pause();
+        }
+      });
+    },
+    {
+      threshold: 0.45,
+      rootMargin: "0px 0px -15% 0px",
+    }
+  );
+
+  containers.forEach((container) => observer.observe(container));
 }
