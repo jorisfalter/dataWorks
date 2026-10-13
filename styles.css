@@ -400,6 +400,15 @@ footer {
     color: #fff;
 }
 
+.footer-built a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-built a:hover {
+    color: #fff;
+}
+
 .footer-copyright {
     color: #666;
     font-size: 0.8rem;
