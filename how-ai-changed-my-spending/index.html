@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>How AI changed my spending | AI Tigers</title>
+    <meta name="description" content="What I stopped paying for, what I still pay for, and where the money goes now that Claude Code builds and runs most of my software on my own server.">
+    <link rel="icon" type="image/x-icon" href="../images/brand/logo.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article {
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .article p,
+        .article ul {
+            margin-bottom: 1.25rem;
+        }
+
+        .article ul {
+            padding-left: 1.25rem;
+        }
+
+        .article h2 {
+            font-size: 2rem;
+            margin: 3rem 0 1rem;
+            text-align: left;
+        }
+
+        .article .lede {
+            font-size: 1.35rem;
+            color: #555;
+        }
+
+        .swap {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 2rem;
+            font-size: 1rem;
+        }
+
+        .swap th {
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #777;
+            padding: 0 0 0.5rem;
+        }
+
+        .swap td {
+            border-top: 1px solid #e5e5e5;
+            padding: 0.75rem 0.75rem 0.75rem 0;
+            vertical-align: top;
+        }
+
+        .swap td:first-child {
+            color: #888;
+            text-decoration: line-through;
+            width: 40%;
+        }
+
+        .article .tech-pills {
+            justify-content: flex-start;
+            margin: 1rem 0 2rem;
+        }
+
+        .byline {
+            color: #777;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .takeaway {
+            background: #0a0a0a;
+            color: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0 1rem;
+        }
+
+        .takeaway h2 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+        .takeaway p {
+            color: #d1d5db;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .article h2 {
+                font-size: 1.6rem;
+            }
+
+            .swap td:first-child {
+                width: 45%;
+            }
+        }
+    </style>
+    <script defer src="https://analytics.ai-tigers.com/script.js" data-website-id="0d5b3778-8e5a-4723-825a-38296e0da39d"></script>
+</head>
+
+<body id="top">
+    <header>
+        <headerTitle>
+            <h1><a href="/" style="color:inherit;text-decoration:none">AI Tigers</a></h1>
+            <img src="../images/brand/logo.webp" alt="AI Tigers Logo" class="logo">
+        </headerTitle>
+        <nav>
+            <a href="/" class="nav-logo">
+                <img src="../images/brand/logo.webp" alt="AI Tigers Logo" class="nav-logo-img">
+            </a>
+            <ul>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#HowItWorks">How It Works</a></li>
+                <li><a href="/#whatWeDo">What We Do</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="hero" style="height:auto;min-height:45vh">
+            <h2>How AI changed <br>my <span class="gold">spending</span></h2>
+            <p>What I stopped paying for, what I still pay for, and where the money goes now.</p>
+        </section>
+
+        <section class="case-studies" style="margin-top:2rem">
+            <div class="article">
+                <p class="byline">By Joris Falter · Lilongwe · October 2026</p>
+
+                <p class="lede">I don’t spend less. I spend it somewhere else. Things I used to rent from platforms, I now build and run myself, with AI doing most of the work.</p>
+
+                <p>Over the last months I moved almost everything I run onto my own server, with Claude Code doing the migrations: reading the old app, writing a Docker setup, moving the secrets, switching DNS. This is the honest list.</p>
+
+                <h2>1. Hosting: four platforms out, one server in</h2>
+                <div class="tech-pills">
+                    <div class="pill black"><span>Heroku</span></div>
+                    <div class="pill black"><span>Fly.io</span></div>
+                    <div class="pill black"><span>Render</span></div>
+                    <div class="pill black"><span>Vercel</span></div>
+                    <div class="pill yellow"><span>→ Hetzner</span></div>
+                </div>
+                <p>Heroku was about $15 a month for 13 apps. Fly was $30 in one month across 11 apps, mostly an n8n machine nobody had switched off: “turning it off” never actually stopped the billing. Now it all runs on Hetzner.</p>
+
+                <h2>2. Analytics: paid out, self-hosted in</h2>
+                <p>Google Analytics, Simple Analytics and Plausible are gone. Since September I run <b>Umami</b> on my second server, next to Cloudflare Web Analytics, which is free. One dashboard for all my sites, both cookieless, so no consent banner.</p>
+
+                <h2>3. Smaller things I dropped</h2>
+                <table class="swap">
+                    <tr><th>Was using</th><th>Now</th></tr>
+                    <tr><td>n8n, Make.com</td><td>Claude Code + cron jobs on my server</td></tr>
+                    <tr><td>MongoDB Atlas</td><td>Static files and SQLite</td></tr>
+                    <tr><td>Mapbox</td><td>MapLibre + OpenFreeMap (free)</td></tr>
+                    <tr><td>Ahrefs / Semrush</td><td>OpenSEO + DataForSEO, about $0.40 a run</td></tr>
+                    <tr><td>PowerPoint</td><td>HTML slides</td></tr>
+                    <tr><td>Video editing software</td><td>ffmpeg + Remotion, Adobe Podcast for audio</td></tr>
+                    <tr><td>Mac utility apps</td><td>Small tools I built: fan control, keyboard lock</td></tr>
+                </table>
+                <p>That first line surprised me most. I used to teach Make.com and still review n8n workflows for clients. For my own work, a scheduled script that Claude Code writes and maintains is now simpler.</p>
+
+                <h2>4. What I kept, and why</h2>
+                <div class="tech-pills">
+                    <div class="pill purple"><img src="../images/logos/slack.svg" alt=""><span>Slack</span></div>
+                    <div class="pill blue"><span>Airtable</span></div>
+                    <div class="pill green"><span>Campfire</span></div>
+                </div>
+                <ul>
+                    <li><b>Slack</b>, because my clients and some of my communities already work there. I join them.</li>
+                    <li><b>Airtable</b> runs some of my automations, and the interface is easy to work with.</li>
+                    <li><b>Campfire</b> for when I hire people myself: a one-time purchase that runs on my own server.</li>
+                </ul>
+
+                <h2>5. Where the money goes now</h2>
+                <div class="tech-pills">
+                    <div class="pill orange"><img src="../images/logos/claude.svg" alt=""><span>Claude</span></div>
+                    <div class="pill green"><img src="../images/logos/chatgpt.svg" alt=""><span>OpenAI</span></div>
+                </div>
+                <p><b>AI tools.</b> Claude Code does the building and the server work. This is the line that went up; everything above went down.</p>
+                <p><b>Hardware</b>, because building got easier. With AI I can do the software side of a hardware project in an evening, so I buy things I wouldn’t have bought before: a Bambu A1 mini 3D printer (city maps, puzzles, parts for my own projects), a Raspberry Pi Zero 2 W that streams Spotify to a speaker all day, and a T-shirt store, simply because setting one up is easy now.</p>
+                <p><b>Two servers.</b> Everything runs on two Hetzner servers in Germany and Finland, connected to my laptop and phones over Tailscale. Public sites go out through a Cloudflare tunnel; nothing private is open to the internet.</p>
+
+                <h2>6. Where the time goes now</h2>
+                <p>YouTube is free to use. I invest in it with time instead: recording, editing, publishing. AI does the editing: cutting silences, captions, thumbnails and audio fixes, without editing software.</p>
+
+                <h2>7. What might go next</h2>
+                <p>My MacBook, maybe for Linux: most of my work now happens in a terminal and on a server. My iPhone and Pixel are both staying for now.</p>
+
+                <div class="takeaway">
+                    <h2>In short</h2>
+                    <p>Fewer platforms, more open-source tools, less paid software. More AI and hardware. The total is about the same, probably a bit more. It just goes somewhere else now.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-outro" style="min-height:auto">
+            <a href="/" class="outro-cta-button">Back to AI Tigers</a>
+            <div class="outro-brand">
+                <img src="../images/brand/logo.webp" alt="AI Tigers Logo" class="outro-logo">
+                <h2 class="outro-title">AI Tigers<span class="tm">™</span></h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-company">
+                <p class="footer-legal-name">Hinano Products</p>
+                <p class="footer-trade-name">Trading as <strong>AI Tigers</strong></p>
+                <p>KVK: 94675090</p>
+                <p>BTW: NL866855932B01</p>
+                <p>Amstelveen, Netherlands</p>
+            </div>
+            <div class="footer-links">
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms &amp; Conditions</a>
+            </div>
+            <p class="footer-built">Also built by us: <a href="https://www.wheredoesthea380fly.com/">Where Does The A380 Fly</a>, a live map of every A380 route</p>
+            <p class="footer-copyright">&copy; 2026 AI Tigers. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
