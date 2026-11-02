@@ -4,5 +4,5 @@
 
 ## Playbooks
 
-- [Agent VPS Playbook](https://www.ai-tigers.com/playbooks/agent-vps/for-agents.md): €8. One Markdown file an agent follows to lock down a Linux VPS (Tailscale, Cloudflare Tunnel, Docker, updates, backups). Summary for agents.
+- [Agent VPS Playbook](https://www.ai-tigers.com/playbooks/agent-vps/for-agents.md): €19. One Markdown file an agent follows to lock down a Linux VPS (Tailscale, Cloudflare Tunnel, Docker, updates, backups). Summary for agents.
 - [All playbooks](https://www.ai-tigers.com/playbooks/)
