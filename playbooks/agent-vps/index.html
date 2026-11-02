@@ -135,6 +135,130 @@
             text-align: center;
         }
 
+        .sub-hero {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: #0a0a0a;
+            color: #fff;
+            border-radius: 999px;
+            padding: 0.35rem 0.85rem;
+            font-size: 0.8rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .sub-hero h2 {
+            font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+            line-height: 1.08;
+            margin-bottom: 1.25rem;
+            color: #222;
+        }
+
+        .sub-hero h2 .hl {
+            color: #222;
+            background: linear-gradient(transparent 58%, rgba(255, 215, 0, 0.55) 58%);
+        }
+
+        .sub-hero .intro {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.75rem;
+            max-width: 34rem;
+        }
+
+        .sub-hero .actions {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .sub-hero .actions .text-link {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .file-card {
+            background: #0a0a0a;
+            color: #d1d5db;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            position: relative;
+            font-family: ui-monospace, Menlo, monospace;
+            font-size: 0.85rem;
+            line-height: 1.65;
+        }
+
+        .file-card::after {
+            content: '🐯';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 120px;
+            opacity: 0.15;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        .file-card .bar {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #262626;
+            color: #9ca3af;
+        }
+
+        .file-card .bar i {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #3f3f46;
+            display: inline-block;
+        }
+
+        .file-card .bar span {
+            margin-left: 0.5rem;
+        }
+
+        .file-card pre {
+            margin: 0;
+            padding: 1.25rem 1.25rem 1.5rem;
+            white-space: pre-wrap;
+            font: inherit;
+        }
+
+        .file-card .h {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .file-card .k {
+            color: gold;
+        }
+
+        .file-card .c {
+            color: #6b7280;
+        }
+
+        @media screen and (max-width: 900px) {
+            .sub-hero {
+                grid-template-columns: 1fr;
+                padding: 3rem 1rem 2rem;
+                gap: 2rem;
+            }
+        }
+
         .faq dt {
             font-weight: 700;
             margin-top: 1.25rem;
@@ -179,10 +303,34 @@
     </header>
 
     <main class="main-container">
-        <section class="hero">
-            <h2>Your server, <br><span class="gold">Locked</span></h2>
-            <p>The Agent VPS Playbook.<br> Give the file to your AI agent.</p>
-            <a href="#buy" class="cta-button">Get early access · €8</a>
+        <section class="sub-hero">
+            <div>
+                <span class="eyebrow">Playbook · v0.1 early access</span>
+                <h2>Give this file to your agent. Get a server with <span class="hl">no doors on the street</span>.</h2>
+                <p class="intro">The Agent VPS Playbook: one Markdown file that Claude Code, Codex or any agent with a shell follows to lock down your VPS. Nothing reachable from the internet, your sites still online.</p>
+                <div class="actions">
+                    <a href="#buy" class="cta-button">Get early access · €8</a>
+                    <a href="#excerpt" class="text-link">See what your agent reads →</a>
+                </div>
+            </div>
+            <div class="file-card" aria-label="Preview of PLAYBOOK.md">
+                <div class="bar"><i></i><i></i><i></i><span>PLAYBOOK.md</span></div>
+<pre><span class="h"># Private-by-default VPS</span>
+<span class="c">An operating playbook for AI agents</span>
+
+You are an AI agent with shell access
+to a Linux server. Follow the phases
+in order. Each phase has a goal, the
+commands, a check and a rollback.
+
+<span class="k">ASK</span> = stop and ask the human.
+Do not guess. Do not work around it.
+
+<span class="h">## 2. Tailscale</span> <span class="c">(the new front door)</span>
+<span class="h">## 5. Cloudflare Tunnel</span>
+<span class="h">## 10. Final verification</span>
+nmap -Pn --top-ports 1000 &lt;IP&gt;  <span class="c"># nothing open</span></pre>
+            </div>
         </section>
 
         <section class="case-studies" style="margin-top:2rem">
