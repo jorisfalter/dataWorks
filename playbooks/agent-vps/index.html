@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent VPS Playbook | AI Tigers</title>
+    <meta name="description" content="A playbook your AI agent follows to lock down a VPS: nothing reachable from the internet, websites still online. Tailscale, Cloudflare Tunnel, Docker, updates, backups. For Claude Code, Codex and other shell agents.">
+    <link rel="canonical" href="https://www.ai-tigers.com/playbooks/agent-vps/">
+    <meta property="og:title" content="Agent VPS Playbook">
+    <meta property="og:description" content="Give this file to your AI agent. Get a server with no doors on the street.">
+    <meta property="og:url" content="https://www.ai-tigers.com/playbooks/agent-vps/">
+    <meta property="og:type" content="product">
+    <link rel="icon" type="image/x-icon" href="../../images/brand/logo.ico">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .article {
+            max-width: 820px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .article p,
+        .article ul {
+            margin-bottom: 1.25rem;
+        }
+
+        .article ul {
+            padding-left: 1.25rem;
+        }
+
+        .article h2 {
+            font-size: 2rem;
+            margin: 3rem 0 1rem;
+            text-align: left;
+        }
+
+        .article .lede {
+            font-size: 1.35rem;
+            color: #555;
+        }
+
+        .phases {
+            list-style: none;
+            padding: 0 !important;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .phases li {
+            background: #f7f7f5;
+            border-radius: 14px;
+            padding: 1rem 1.1rem;
+            line-height: 1.5;
+        }
+
+        .phases b {
+            display: block;
+        }
+
+        .phases span {
+            color: #666;
+            font-size: 0.98rem;
+        }
+
+        .excerpt {
+            background: #0a0a0a;
+            color: #e5e7eb;
+            border-radius: 20px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-size: 0.92rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .excerpt .file {
+            color: #9ca3af;
+            font-family: ui-monospace, Menlo, monospace;
+            font-size: 0.8rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .excerpt h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .excerpt table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 640px;
+        }
+
+        .excerpt th {
+            text-align: left;
+            color: #9ca3af;
+            font-weight: 500;
+            padding: 0 0.75rem 0.5rem 0;
+        }
+
+        .excerpt td {
+            border-top: 1px solid #262626;
+            padding: 0.6rem 0.75rem 0.6rem 0;
+            vertical-align: top;
+        }
+
+        .excerpt code {
+            font-family: ui-monospace, Menlo, monospace;
+            color: #fcd34d;
+            font-size: 0.85rem;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .split h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .buy {
+            max-width: 460px;
+            margin: 2rem auto 0;
+        }
+
+        .buy .note {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
+            text-align: center;
+        }
+
+        .faq dt {
+            font-weight: 700;
+            margin-top: 1.25rem;
+        }
+
+        .faq dd {
+            margin: 0.25rem 0 0;
+            color: #444;
+        }
+
+        @media screen and (max-width: 768px) {
+            .article h2 {
+                font-size: 1.6rem;
+            }
+
+            .phases,
+            .split {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script defer src="https://analytics.ai-tigers.com/script.js" data-website-id="0d5b3778-8e5a-4723-825a-38296e0da39d"></script>
+</head>
+
+<body id="top">
+    <header>
+        <headerTitle>
+            <h1><a href="/" style="color:inherit;text-decoration:none">AI Tigers</a></h1>
+            <img src="../../images/brand/logo.webp" alt="AI Tigers Logo" class="logo">
+        </headerTitle>
+        <nav>
+            <a href="/" class="nav-logo">
+                <img src="../../images/brand/logo.webp" alt="AI Tigers Logo" class="nav-logo-img">
+            </a>
+            <ul>
+                <li><a href="#what">What it does</a></li>
+                <li><a href="#excerpt">Excerpt</a></li>
+                <li><a href="#buy">Price</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="hero" style="height:auto;min-height:50vh">
+            <h2>Give this file to your agent.<br>Get a server with <span class="gold">no doors</span><br>on the street.</h2>
+            <p>The Agent VPS Playbook. Written for Claude Code, Codex and any AI agent with a shell.</p>
+            <a href="#buy" class="cta-button">Get early access · €8</a>
+        </section>
+
+        <section class="case-studies" style="margin-top:2rem">
+            <div class="article">
+                <p class="lede">Most servers are “secured” with a firewall and a strong password. Then a test database, an old admin page or a Docker port ends up on the internet anyway.</p>
+
+                <p>This playbook takes a different route: <b>nothing on the server answers the public internet</b>. Websites reach it through a Cloudflare tunnel the server opens from the inside. You reach it through Tailscale, from your own laptop and phone. No open ports, no SSH on port 22, no door to knock on.</p>
+
+                <p>It is not a blog post or a course. It is one Markdown file, written for your agent, not for you. Each phase has a goal, the commands, a check that must pass and a rollback. Where only you can decide or log in, the agent stops and asks you.</p>
+
+                <h2 id="what">What your agent will set up</h2>
+                <ul class="phases">
+                    <li><b>0. Safety rules</b><span>A dead-man switch: risky changes undo themselves unless the agent confirms it can still get in.</span></li>
+                    <li><b>1. Audit first</b><span>Read-only: what is running, what is open, what the target state is.</span></li>
+                    <li><b>2. Tailscale</b><span>Your private way in. SSH only from your own devices.</span></li>
+                    <li><b>3–4. Firewall and SSH</b><span>Public SSH closed, password login off, and why a custom port does not help.</span></li>
+                    <li><b>5. Cloudflare Tunnel</b><span>Websites stay online without an open port. Including a live site move with zero downtime.</span></li>
+                    <li><b>6. Cloud firewall</b><span>A second lock at the provider, so one mistake on the server does not reopen it.</span></li>
+                    <li><b>7. Docker rules</b><span>The Docker port trap that bypasses your firewall, and how to avoid it.</span></li>
+                    <li><b>8. Updates</b><span>Four update streams, reboots, a monthly checklist and an alert when patches lag.</span></li>
+                    <li><b>9. Backups and alerts</b><span>3-2-1 backups, memory protection, and rules for several agents on one server.</span></li>
+                    <li><b>10. Final check</b><span>A scan from outside that must show nothing open, reported to you as a checklist.</span></li>
+                </ul>
+                <p style="margin-top:1rem">Plus: a cloud-init setup for a new server that is never exposed at all, and how to choose a Hetzner server type.</p>
+
+                <h2 id="excerpt">What your agent reads</h2>
+                <p>Four of the nine rows from the anti-patterns table. Your agent runs every check and fixes what it finds.</p>
+                <div class="excerpt">
+                    <p class="file">PLAYBOOK.md · 9.5 Anti-patterns: check for these explicitly</p>
+                    <table>
+                        <tr><th>Anti-pattern</th><th>Why it is wrong</th><th>Check</th></tr>
+                        <tr><td>Docker port published as <code>8080:80</code></td><td>Docker writes its own iptables rules; ufw shows it closed while it is open</td><td><code>docker ps --format '{{.Ports}}' | grep -v 127.0.0.1</code></td></tr>
+                        <tr><td>Old reverse proxy still on 80/443 next to the tunnel</td><td>Every site is reachable by IP, bypassing Cloudflare</td><td><code>ss -tlnp | grep -E ':(80|443) '</code></td></tr>
+                        <tr><td>A record pointing at the server IP</td><td>Leaks the origin; the IP stays useful to attackers after you close it</td><td><code>dig +short &lt;host&gt;</code></td></tr>
+                        <tr><td><code>reboot-required</code> ignored</td><td>Kernel and libc fixes are not active until reboot</td><td><code>ls -l /var/run/reboot-required</code></td></tr>
+                    </table>
+                </div>
+
+                <h2>Why I wrote it</h2>
+                <p>I run AI Tigers on two rented servers: about fifty sites and a dozen AI agent sessions that build, deploy and maintain them, mostly while I’m on my phone. Every rule in this playbook is there because leaving it out caused a real problem. The playbook is what my own agents follow.</p>
+
+                <div class="split">
+                    <div>
+                        <h3>For you if</h3>
+                        <ul>
+                            <li>You rent a VPS (or want to) and let an AI agent work on it</li>
+                            <li>You want your own server instead of five SaaS bills</li>
+                            <li>You can approve a command, even if you could not write it</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Not for you if</h3>
+                        <ul>
+                            <li>You never want to open a terminal</li>
+                            <li>You run Kubernetes or a team of sysadmins</li>
+                            <li>You want app security: this secures the server, not your code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="buy" class="pricing">
+            <div class="pricing-header">
+                <h2>Early access</h2>
+                <p class="subtitle">One file. Free updates until v1.0.</p>
+            </div>
+            <div class="buy">
+                <div class="price-card">
+                    <div class="price-card-header">
+                        <h3>Agent VPS Playbook</h3>
+                        <span class="badge">v0.1 early access</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price">€8</span>
+                        <span class="per">one-time</span>
+                    </div>
+                    <div class="includes">
+                        <span class="includes-label">Included</span>
+                        <ul class="includes-list">
+                            <li>PLAYBOOK.md, ~750 lines, English</li>
+                            <li>Phases 0–10 plus 3 appendices</li>
+                            <li>Works with Claude Code, Codex and other shell agents</li>
+                            <li>Every update until v1.0, free</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:joris@jorisfalter.com?subject=Agent%20VPS%20Playbook%20early%20access" class="cta-button full" data-umami-event="playbook-agent-vps-buy">Get early access</a>
+                </div>
+                <p class="note">Send the email; you get a payment link and the file by reply, usually the same day.</p>
+            </div>
+        </section>
+
+        <section id="faq" class="case-studies" style="margin-top:2rem">
+            <div class="article">
+                <h2 style="margin-top:0">Questions</h2>
+                <dl class="faq">
+                    <dt>Which agents does it work with?</dt>
+                    <dd>Any agent that can run shell commands on the server: Claude Code, Codex, Cursor’s agent, or a human who copies commands carefully.</dd>
+                    <dt>Which provider?</dt>
+                    <dd>Written for and used on Hetzner Cloud with Ubuntu LTS. Most of it works on any Linux VPS; the provider-specific parts are marked. Server prices: see <a href="https://www.hetzner.com/cloud/">Hetzner’s own price list</a>.</dd>
+                    <dt>Do I need Cloudflare and Tailscale?</dt>
+                    <dd>Yes. Both have free plans that cover this setup. Your domain needs to be on Cloudflare.</dd>
+                    <dt>What does “early access” mean?</dt>
+                    <dd>The playbook runs on my own servers today. Before v1.0 a fresh agent sets up a brand-new server with nothing but this file, and whatever it stumbles on gets fixed. You get that version, and every one before it, for free.</dd>
+                    <dt>What does it not cover?</dt>
+                    <dd>The security of your own apps: logins, rate limits, outdated frameworks. A closed server still serves a bad login to every visitor. Check your apps, not just your firewall.</dd>
+                    <dt>Can I share it?</dt>
+                    <dd>For your own servers and your own clients’ servers, yes. Please don’t republish or resell the file.</dd>
+                    <dt>I’d rather have it done for me</dt>
+                    <dd>In the Netherlands: <a href="https://vrijdagklaar.nl">VrijdagKlaar</a>. In Southern Africa: <a href="https://interafricaaibuilders.com">InterAfrica AI Builders</a>.</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="page-outro" style="min-height:auto">
+            <a href="#buy" class="outro-cta-button">Get the playbook</a>
+            <div class="outro-brand">
+                <img src="../../images/brand/logo.webp" alt="AI Tigers Logo" class="outro-logo">
+                <h2 class="outro-title">AI Tigers<span class="tm">™</span></h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-company">
+                <p class="footer-legal-name">Hinano Products</p>
+                <p class="footer-trade-name">Trading as <strong>AI Tigers</strong></p>
+                <p>KVK: 94675090</p>
+                <p>BTW: NL866855932B01</p>
+                <p>Amstelveen, Netherlands</p>
+            </div>
+            <div class="footer-links">
+                <a href="../../privacy.html">Privacy Policy</a>
+                <a href="../../terms.html">Terms &amp; Conditions</a>
+            </div>
+            <p class="footer-built">Also built by us: <a href="https://www.wheredoesthea380fly.com/">Where Does The A380 Fly</a>, a live map of every A380 route</p>
+            <p class="footer-copyright">&copy; 2026 AI Tigers. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
