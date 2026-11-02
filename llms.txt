@@ -1,0 +1,8 @@
+# AI Tigers
+
+> AI Tigers (Hinano Products, Netherlands) teaches what it builds with AI agents. Playbooks are written for AI agents to follow on behalf of their humans.
+
+## Playbooks
+
+- [Agent VPS Playbook](https://www.ai-tigers.com/playbooks/agent-vps/for-agents.md): €8. One Markdown file an agent follows to lock down a Linux VPS (Tailscale, Cloudflare Tunnel, Docker, updates, backups). Summary for agents.
+- [All playbooks](https://www.ai-tigers.com/playbooks/)

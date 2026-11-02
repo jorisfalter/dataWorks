@@ -1,0 +1,276 @@
+/* Shared styles for /playbooks/ (index + one page per product).
+   Brand elements come from ../styles.css; this file only adds the subpage layout. */
+
+.sub-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem 4rem;
+}
+
+.eyebrow {
+    display: inline-block;
+    background: #0a0a0a;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+}
+
+.sub-hero h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.hl {
+    background: linear-gradient(transparent 58%, rgba(255, 215, 0, 0.6) 58%);
+}
+
+.sub-hero .intro {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+    max-width: 30rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-link {
+    color: #333;
+    font-weight: 600;
+}
+
+.small {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Black "file" card: shows what the buyer gets */
+.file-card {
+    background: #0a0a0a;
+    color: #d1d5db;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+.file-card::after {
+    content: '🐯';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 120px;
+    opacity: 0.15;
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+.file-card .bar {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #262626;
+    color: #9ca3af;
+}
+
+.file-card .bar i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3f3f46;
+    display: inline-block;
+}
+
+.file-card .bar span {
+    margin-left: 0.5rem;
+}
+
+.file-card pre {
+    margin: 0;
+    padding: 1.25rem 1.25rem 1.5rem;
+    white-space: pre-wrap;
+    font: inherit;
+}
+
+.file-card .h { color: #fff; font-weight: 700; }
+.file-card .k { color: gold; }
+.file-card .c { color: #6b7280; }
+
+/* White panel */
+.panel {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    padding: 3rem 2rem;
+}
+
+.panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.gets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.gets div {
+    background: #f7f7f5;
+    border-radius: 14px;
+    padding: 1.25rem;
+}
+
+.gets b {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.gets span {
+    color: #666;
+}
+
+.excerpt {
+    background: #0a0a0a;
+    color: #e5e7eb;
+    border-radius: 20px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    font-size: 0.92rem;
+}
+
+.excerpt table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 560px;
+}
+
+.excerpt th {
+    text-align: left;
+    color: #9ca3af;
+    font-weight: 500;
+    padding: 0 0.75rem 0.5rem 0;
+}
+
+.excerpt td {
+    border-top: 1px solid #262626;
+    padding: 0.6rem 0.75rem 0.6rem 0;
+    vertical-align: top;
+}
+
+.excerpt code {
+    font-family: ui-monospace, Menlo, monospace;
+    color: #fcd34d;
+    font-size: 0.85rem;
+}
+
+/* Price + FAQ side by side */
+.close {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.faq details {
+    border-top: 1px solid #e5e5e5;
+    padding: 0.9rem 0;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.faq details p {
+    color: #555;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Index: product cards */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.product {
+    background: #f7f7f5;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.product.paid {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.product .tag {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.product.paid .tag {
+    color: gold;
+}
+
+.product h3 {
+    font-size: 1.3rem;
+}
+
+.product p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.product.paid p {
+    color: #d1d5db;
+}
+
+.product.soon {
+    opacity: 0.55;
+}
+
+@media screen and (max-width: 900px) {
+    .sub-hero,
+    .close,
+    .gets {
+        grid-template-columns: 1fr;
+    }
+
+    .sub-hero {
+        padding: 3rem 1rem 2rem;
+        gap: 2rem;
+    }
+
+    .panel {
+        padding: 2rem 1rem;
+        margin: 0 0 1.5rem;
+    }
+}
