@@ -1731,16 +1731,7 @@ headerTitle {
         white-space: nowrap;
     }
 }
-/* Hero accents (2026-11-03): handwritten Grow + Accelerate (Caveat, lowercase), small offset shadow so the gold holds up on the light background */
-.hero h2 .gold {
-    font-family: 'Caveat', cursive;
-    font-weight: 500;
-    font-size: 1.35em;
-    line-height: 1;
-    text-shadow: 2px 2px 0 #333;
-    padding: 0 0.15em 0.1em; /* room for the shadow, .gold has overflow:hidden */
-}
-
+/* Hero accent (2026-11-03): handwritten Accelerate (Caveat) */
 .hero .accel {
     font-family: 'Caveat', cursive;
     font-weight: 500;
