@@ -1731,16 +1731,17 @@ headerTitle {
         white-space: nowrap;
     }
 }
-/* Hero accents (2026-11-03): GROW in caps with a dark offset shadow so the gold holds up on the light background */
+/* Hero accents (2026-11-03): handwritten Grow + Accelerate, dark offset shadow so the gold holds up on the light background */
 .hero h2 .gold {
-    letter-spacing: 0.02em;
-    text-shadow: 4px 4px 0 #333;
-    padding: 0 6px 6px 0; /* room for the shadow, .gold has overflow:hidden */
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    font-size: 1.15em;
+    text-shadow: 3px 3px 0 #333;
+    padding: 0 0.15em 0.1em; /* room for the shadow, .gold has overflow:hidden */
 }
 
 .hero .accel {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    font-style: normal;
     color: #333;
 }
