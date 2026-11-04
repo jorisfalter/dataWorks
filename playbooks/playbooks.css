@@ -274,3 +274,35 @@
         margin: 0 0 1.5rem;
     }
 }
+
+/* FAQ accordion (transitions.dev "accordion expand"): smooth open where the
+   browser supports ::details-content, plain open/close everywhere else */
+.faq details {
+    interpolate-size: allow-keywords;
+}
+.faq details::details-content {
+    height: 0;
+    overflow: hidden;
+    transition: height var(--duration-fast) var(--ease-smooth-out), content-visibility var(--duration-fast) allow-discrete;
+}
+.faq details[open]::details-content {
+    height: auto;
+}
+.faq summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+    content: '+';
+    transition: transform var(--duration-fast) var(--ease-smooth-out);
+}
+.faq details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .faq details::details-content, .faq summary::after { transition: none; }
+}

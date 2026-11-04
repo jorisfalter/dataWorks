@@ -1739,3 +1739,49 @@ headerTitle {
     font-size: 1.3em;
     color: #333;
 }
+
+/* Motion (2026-11-04), after transitions.dev: one token scale, small and calm.
+   See brand repo docs/web-best-practices.md. */
+:root {
+    --duration-quick: 150ms;
+    --duration-fast: 250ms;
+    --duration-very-slow: 500ms;
+    --duration-stagger: 80ms;
+    --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes t-rise {
+    from { opacity: 0; transform: translateY(12px); filter: blur(3px); }
+    to { opacity: 1; transform: none; filter: none; }
+}
+
+/* Texts reveal: headline, then subline, then button */
+.hero h2,
+.hero p,
+.hero .cta-button,
+.sub-hero > div > * {
+    animation: t-rise var(--duration-very-slow) var(--ease-smooth-out) both;
+}
+.hero p, .sub-hero > div > :nth-child(2) { animation-delay: calc(var(--duration-stagger) * 1); }
+.hero .cta-button, .sub-hero > div > :nth-child(3) { animation-delay: calc(var(--duration-stagger) * 2); }
+.sub-hero > div > :nth-child(4) { animation-delay: calc(var(--duration-stagger) * 3); }
+
+/* Button: subtle lift on hover, press on click */
+.cta-button {
+    transition: transform var(--duration-fast) var(--ease-smooth-out), background-color var(--duration-fast) var(--ease-smooth-out), box-shadow var(--duration-fast) var(--ease-smooth-out);
+}
+.cta-button:hover { transform: scale(1.03); }
+.cta-button:active { transform: scale(0.97); transition-duration: var(--duration-quick); }
+
+/* Learn-more arrow */
+.arr {
+    display: inline-block;
+    transition: transform var(--duration-fast) var(--ease-smooth-out);
+}
+a:hover .arr { transform: translateX(4px); }
+
+@media (prefers-reduced-motion: reduce) {
+    .hero h2, .hero p, .hero .cta-button, .sub-hero > div > * { animation: none; }
+    .cta-button, .arr { transition: none; }
+    .cta-button:hover, .cta-button:active, a:hover .arr { transform: none; }
+}
