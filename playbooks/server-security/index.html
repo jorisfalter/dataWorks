@@ -11,8 +11,8 @@
     <meta property="og:description" content="How a server with no doors on the street works, explained with one building. A free slide deck with the questions people asked.">
     <meta property="og:url" content="https://www.ai-tigers.com/playbooks/server-security/">
     <link rel="icon" type="image/x-icon" href="../../images/brand/logo.ico">
-    <link rel="stylesheet" href="../../styles.css?v=20261106c">
-    <link rel="stylesheet" href="../playbooks.css?v=20261106c">
+    <link rel="stylesheet" href="../../styles.css?v=20261106d">
+    <link rel="stylesheet" href="../playbooks.css?v=20261106d">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap">
     <script defer src="https://analytics.ai-tigers.com/script.js" data-website-id="0d5b3778-8e5a-4723-825a-38296e0da39d"></script>
@@ -36,16 +36,16 @@
     </header>
 
     <main class="main-container">
-        <section class="sub-hero" style="grid-template-columns:1fr">
+        <section class="sub-hero">
             <div>
                 <span class="eyebrow">Free deck</span>
                 <h2>Server security, simply</h2>
                 <p class="intro">How a server with no doors on the street works, explained with one building.</p>
                 <div class="actions">
                     <a href="#slide-1" class="cta-button" data-umami-event="deck-server-security-start">See the 14 slides</a>
-                    <a href="https://youtu.be/t6gGXBU8IQA" class="text-link" data-umami-event="deck-server-security-video">Watch the video <span class="arr">→</span></a>
                 </div>
             </div>
+            <a class="yt" href="https://youtu.be/t6gGXBU8IQA" data-yt="t6gGXBU8IQA" data-umami-event="deck-server-security-video" aria-label="Play the video: Server security, simply"><img src="https://i.ytimg.com/vi/t6gGXBU8IQA/hqdefault.jpg" alt="" width="480" height="360"><span class="yt-play"></span></a>
         </section>
 
         <section class="panel deck">
@@ -403,6 +403,19 @@
             entries.forEach(function (e) { e.target.style.setProperty('--s', e.contentRect.width / 1920); });
         });
         document.querySelectorAll('.deck-frame').forEach(function (f) { ro.observe(f); });
+        // Video: thumbnail first, so YouTube only loads (and sets cookies) after a click.
+        document.querySelectorAll('.yt').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                var f = document.createElement('iframe');
+                f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.yt + '?autoplay=1&rel=0';
+                f.title = a.getAttribute('aria-label');
+                f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+                f.allowFullscreen = true;
+                f.className = 'yt';
+                a.replaceWith(f);
+            });
+        });
     </script>
 </body>
 

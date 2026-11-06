@@ -361,3 +361,48 @@
 }
 .deck-close { text-align: center; }
 .deck-close p { color: #555; margin-bottom: 1.5rem; }
+
+/* YouTube: thumbnail with play button, swapped for the player on click */
+.yt {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0a0a0a;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+.yt img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.yt-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 76px;
+    height: 76px;
+    margin: -38px 0 0 -38px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    transition: transform var(--duration-fast) var(--ease-smooth-out);
+}
+.yt-play::after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 22px;
+    border-style: solid;
+    border-width: 16px 0 16px 26px;
+    border-color: transparent transparent transparent gold;
+}
+.yt:hover .yt-play { transform: scale(1.08); }
+
+@media (prefers-reduced-motion: reduce) {
+    .yt-play { transition: none; }
+    .yt:hover .yt-play { transform: none; }
+}

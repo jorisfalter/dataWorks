@@ -11,8 +11,8 @@
     <meta property="og:description" content="What I stopped paying for, what I still pay for, and where the money goes now. A free slide deck.">
     <meta property="og:url" content="https://www.ai-tigers.com/playbooks/ai-spending/">
     <link rel="icon" type="image/x-icon" href="../../images/brand/logo.ico">
-    <link rel="stylesheet" href="../../styles.css?v=20261106c">
-    <link rel="stylesheet" href="../playbooks.css?v=20261106c">
+    <link rel="stylesheet" href="../../styles.css?v=20261106d">
+    <link rel="stylesheet" href="../playbooks.css?v=20261106d">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap">
@@ -37,16 +37,16 @@
     </header>
 
     <main class="main-container">
-        <section class="sub-hero" style="grid-template-columns:1fr">
+        <section class="sub-hero">
             <div>
                 <span class="eyebrow">Free deck</span>
                 <h2>How AI changed my spending</h2>
                 <p class="intro">What I stopped paying for, what I still pay for, and where the money goes now.</p>
                 <div class="actions">
                     <a href="#slide-1" class="cta-button" data-umami-event="deck-ai-spending-start">See the 13 slides</a>
-                    <a href="https://youtu.be/Zfl_rx6S5UU" class="text-link" data-umami-event="deck-ai-spending-video">Watch the video <span class="arr">→</span></a>
                 </div>
             </div>
+            <a class="yt" href="https://youtu.be/Zfl_rx6S5UU" data-yt="Zfl_rx6S5UU" data-umami-event="deck-ai-spending-video" aria-label="Play the video: How AI changed my spending"><img src="https://i.ytimg.com/vi/Zfl_rx6S5UU/hqdefault.jpg" alt="" width="480" height="360"><span class="yt-play"></span></a>
         </section>
 
         <section class="panel deck">
@@ -316,6 +316,19 @@
             entries.forEach(function (e) { e.target.style.setProperty('--s', e.contentRect.width / 1920); });
         });
         document.querySelectorAll('.deck-frame').forEach(function (f) { ro.observe(f); });
+        // Video: thumbnail first, so YouTube only loads (and sets cookies) after a click.
+        document.querySelectorAll('.yt').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                var f = document.createElement('iframe');
+                f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.yt + '?autoplay=1&rel=0';
+                f.title = a.getAttribute('aria-label');
+                f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+                f.allowFullscreen = true;
+                f.className = 'yt';
+                a.replaceWith(f);
+            });
+        });
     </script>
 </body>
 
