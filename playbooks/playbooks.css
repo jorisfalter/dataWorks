@@ -306,3 +306,59 @@
 @media (prefers-reduced-motion: reduce) {
     .faq details::details-content, .faq summary::after { transition: none; }
 }
+
+/* Deck pages: slides stacked on a fixed 1920x1080 canvas, speaker notes as text below */
+.deck {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.deck-slide {
+    margin: 0;
+    scroll-margin-top: 1rem;
+}
+.deck-scroll {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.deck-frame {
+    --s: 0.5;
+    position: relative;
+    width: 100%;
+    min-width: 640px; /* below this the slide text is unreadable; the frame scrolls instead */
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+.deck-frame > section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transform: scale(var(--s));
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    animation: none;
+}
+.deck-frame > section * { margin: 0; box-sizing: border-box; }
+.deck-frame > section div { display: flex; flex-direction: column; }
+.deck-frame h1 { font-size: 96px; font-weight: 600; line-height: 1.1; }
+.deck-frame h2 { font-size: 64px; font-weight: 600; line-height: 1.15; }
+.deck-frame h3 { font-size: 44px; font-weight: 600; line-height: 1.2; }
+.deck-frame p { font-size: 32px; font-weight: 400; line-height: 1.4; }
+.deck-frame img, .deck-frame svg { max-width: none; flex: none; }
+.deck-slide figcaption {
+    color: #555;
+    line-height: 1.6;
+    max-width: 46rem;
+    margin-top: 1rem;
+}
+.deck-close { text-align: center; }
+.deck-close p { color: #555; margin-bottom: 1.5rem; }

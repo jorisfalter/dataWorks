@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server security, simply | AI Tigers</title>
+    <meta name="description" content="How a server with no doors on the street works, explained with one building. A free slide deck with the questions people asked.">
+    <link rel="canonical" href="https://www.ai-tigers.com/playbooks/server-security/">
+    <meta property="og:title" content="Server security, simply">
+    <meta property="og:description" content="How a server with no doors on the street works, explained with one building. A free slide deck with the questions people asked.">
+    <meta property="og:url" content="https://www.ai-tigers.com/playbooks/server-security/">
+    <link rel="icon" type="image/x-icon" href="../../images/brand/logo.ico">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../playbooks.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap">
+    <script defer src="https://analytics.ai-tigers.com/script.js" data-website-id="0d5b3778-8e5a-4723-825a-38296e0da39d"></script>
+</head>
+
+<body id="top">
+    <header>
+        <headerTitle>
+            <h1><a href="/" style="color:inherit;text-decoration:none">AI Tigers</a></h1>
+            <img src="../../images/brand/logo.webp" alt="AI Tigers Logo" class="logo">
+        </headerTitle>
+        <nav>
+            <a href="/" class="nav-logo">
+                <img src="../../images/brand/logo.webp" alt="AI Tigers Logo" class="nav-logo-img">
+            </a>
+            <ul>
+                <li><a href="/playbooks/">Playbooks</a></li>
+                <li><a href="#slide-1">Slides</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="sub-hero" style="grid-template-columns:1fr">
+            <div>
+                <span class="eyebrow">Free deck</span>
+                <h2>Server security, simply</h2>
+                <p class="intro">How a server with no doors on the street works, explained with one building.</p>
+                <div class="actions">
+                    <a href="#slide-1" class="cta-button" data-umami-event="deck-server-security-start">See the 14 slides</a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="panel deck">
+<figure class="deck-slide" id="slide-1"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<div style="position:absolute;left:128px;top:840px;width:1000px;height:6px;background:#1E2933"></div>
+<p style="position:absolute;left:128px;top:856px;width:1000px;font-family:'Caveat', cursive;font-size:36px;color:#55606B;text-align:center">the street = the internet</p>
+<div style="position:absolute;left:330px;top:380px;width:400px;height:460px;background:#E6DCC6;border:4px solid #1E2933;border-radius:6px 6px 0 0;display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;padding:40px 40px 140px 40px">
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+</div>
+<p style="position:absolute;left:380px;top:316px;width:300px;font-family:'Caveat', cursive;font-size:40px;color:#1E2933;text-align:center">my server</p>
+<p style="position:absolute;left:1170px;top:250px;width:622px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">Self-hosting, explained</p>
+<h1 style="position:absolute;left:1170px;top:300px;width:622px;font-size:96px;font-weight:700;line-height:1.05;color:#1E2933">Is my server safe?</h1>
+<p style="position:absolute;left:1170px;top:540px;width:622px;font-size:36px;line-height:1.4;color:#55606B">Server security, explained with one building.</p>
+</section>
+</div></div><figcaption>I run about 20 apps on one rented server. People ask me: isn’t that dangerous? So here’s how it’s protected, explained with one building. No jargon needed.</figcaption></figure>
+<figure class="deck-slide" id="slide-2"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<div style="position:absolute;left:128px;top:840px;width:1000px;height:6px;background:#1E2933"></div>
+<p style="position:absolute;left:128px;top:856px;width:1000px;font-family:'Caveat', cursive;font-size:36px;color:#55606B;text-align:center">the street = the internet</p>
+<div style="position:absolute;left:330px;top:380px;width:400px;height:460px;background:#E6DCC6;border:4px solid #1E2933;border-radius:6px 6px 0 0;display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;padding:40px 40px 140px 40px">
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+</div>
+<p style="position:absolute;left:380px;top:316px;width:300px;font-family:'Caveat', cursive;font-size:40px;color:#1E2933;text-align:center">my server</p>
+<p style="position:absolute;left:750px;top:420px;width:330px;font-family:'Caveat', cursive;font-size:36px;line-height:1.2;color:#1E2933">← about 20 shops: my apps</p>
+<p style="position:absolute;left:128px;top:260px;width:600px;font-family:'Caveat', cursive;font-size:34px;color:#55606B">Hetzner owns the building. I run everything inside.</p>
+<p style="position:absolute;left:1170px;top:200px;width:622px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">The server</p>
+<h2 style="position:absolute;left:1170px;top:248px;width:622px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">My server is a building I rent</h2>
+<p style="position:absolute;left:1170px;top:470px;width:622px;font-size:32px;line-height:1.4;color:#55606B">Hetzner owns it. Everything inside is mine to run. About 20 apps are inside, like shops. The people using them are the customers.</p>
+<p style="position:absolute;left:1170px;top:780px;width:622px;font-size:26px;font-weight:600;color:#1E2933;background:#E6DCC6;padding:12px 20px;border-radius:999px">Server = building · apps = shops · users = customers</p>
+</section>
+</div></div><figcaption>I rent the building. Everything inside is mine to run. About 20 apps are inside, like shops: my websites, my tools, my experiments. The people using them are the customers who visit.</figcaption></figure>
+<figure class="deck-slide" id="slide-3"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<div style="position:absolute;left:128px;top:840px;width:1000px;height:6px;background:#1E2933"></div>
+<p style="position:absolute;left:128px;top:856px;width:1000px;font-family:'Caveat', cursive;font-size:36px;color:#55606B;text-align:center">the street = the internet</p>
+<div style="position:absolute;left:330px;top:380px;width:400px;height:460px;background:#E6DCC6;border:4px solid #1E2933;border-radius:6px 6px 0 0;display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;padding:40px 40px 140px 40px">
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+</div>
+<p style="position:absolute;left:380px;top:316px;width:300px;font-family:'Caveat', cursive;font-size:40px;color:#1E2933;text-align:center">my server</p>
+<p style="position:absolute;left:150px;top:640px;width:170px;font-family:'Caveat', cursive;font-size:30px;font-weight:700;color:#F5F1E8;background:#1E2933;padding:8px 12px;border-radius:8px;text-align:center">Server St. 1</p>
+<p style="position:absolute;left:800px;top:660px;width:320px;font-family:'Caveat', cursive;font-size:34px;color:#C2551F;text-align:center">bots, 24/7</p>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:870px;top:740px;width:72px;height:72px;color:#C2551F"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:990px;top:740px;width:72px;height:72px;color:#C2551F"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+<p style="position:absolute;left:1170px;top:200px;width:622px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">IP address</p>
+<h2 style="position:absolute;left:1170px;top:248px;width:622px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">Anyone can find the address</h2>
+<p style="position:absolute;left:1170px;top:470px;width:622px;font-size:32px;line-height:1.4;color:#55606B">The street address is public. And these days, bots walk every street, day and night, trying every door they see.</p>
+<p style="position:absolute;left:1170px;top:780px;width:622px;font-size:26px;font-weight:600;color:#1E2933;background:#E6DCC6;padding:12px 20px;border-radius:999px">IP address = the street address</p>
+</section>
+</div></div><figcaption>Anyone on the internet can find the address. And there are now automated bots, some of them AI agents, walking every street 24/7 and trying every door.</figcaption></figure>
+<figure class="deck-slide" id="slide-4"><div class="deck-scroll"><div class="deck-frame"><section style="background:#f5f1e8">
+  <div style="position:absolute; top:840px; left:128px; width:1000px; height:6px; display:flex; flex-direction:column; background:#1e2933">
+  </div>
+  <p style="position:absolute; top:856px; left:128px; width:1000px; font-family:Caveat, 'Brush Script MT', serif; font-size:36px; text-align:center; color:#55606b">the street = the internet</p>
+  <div style="position:absolute; top:380px; left:330px; width:400px; height:460px; display:grid; gap:28px; grid-template-columns:1fr 1fr 1fr; padding:40px 40px 140px; background:#e6dcc6; border:4px solid #1e2933; border-radius:6px 6px 0 0">
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+  </div>
+  <p style="position:absolute; top:316px; left:380px; width:300px; font-family:Caveat, 'Brush Script MT', serif; font-size:40px; text-align:center; color:#1e2933">my server</p>
+  <div style="position:absolute; top:740px; left:470px; width:90px; height:100px; display:flex; flex-direction:column; background:#8a5a3b; border:4px solid #1e2933; border-radius:8px 8px 0 0">
+  </div>
+  <div style="position:absolute; top:760px; left:630px; width:60px; height:80px; display:flex; flex-direction:column; background:#8a5a3b; border:4px solid #1e2933; border-radius:6px 6px 0 0">
+  </div>
+  <p style="position:absolute; top:540px; left:128px; width:200px; font-family:Caveat, 'Brush Script MT', serif; font-size:32px; line-height:1.1; color:#1e2933">front door: for customers (HTTPS, port 443)</p>
+  <svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M260.0 690.0 L466.0 780.0" fill="none" stroke="#1e2933" stroke-width="3.0"/><polygon fill="#1e2933" points="466.0,780.0 452.1,781.2 457.4,768.9"/></svg>
+  <p style="position:absolute; top:520px; left:760px; width:330px; font-family:Caveat, 'Brush Script MT', serif; font-size:32px; line-height:1.1; color:#1e2933">service door: only for me (SSH, port 22)</p>
+  <svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M800.0 600.0 L694.0 770.0" fill="none" stroke="#1e2933" stroke-width="3.0"/><polygon fill="#1e2933" points="694.0,770.0 694.8,756.0 706.2,763.1"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute; top:740px; left:870px; width:72px; height:72px; color:#c2551f"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute; top:740px; left:990px; width:72px; height:72px; color:#c2551f"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+  <p style="position:absolute; top:200px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#2e6db4">Open ports</p>
+  <h2 style="position:absolute; top:248px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.1; color:#1e2933">Every open port is a door on the street</h2>
+  <p style="position:absolute; top:470px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:32px; line-height:1.4; color:#55606b">Each door is a way in. A typical server has a front door where customers come in for the websites, and a service door where the owner comes in to manage everything.</p>
+  <p style="position:absolute; top:780px; left:1170px; width:622px; padding:12px 20px; font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:600; color:#1e2933; background:#e6dcc6; border-radius:256px">Port = a door ·&nbsp;<br>443 = HTTPS (websites) ·&nbsp;<br>22 = SSH (admin)</p>
+</section>
+</div></div><figcaption>Every open port is a door on the street. A normal server has at least two. The front door, port 443, that’s HTTPS: where customers come in to use the websites. And the service door, port 22, that’s SSH: where I come in to manage the server. The bots try both.</figcaption></figure>
+<figure class="deck-slide" id="slide-5"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<p style="position:absolute;left:128px;top:128px;width:1664px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">The whole setup</p>
+<h2 style="position:absolute;left:128px;top:172px;width:1664px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">Two entrances, nothing else</h2>
+<div style="position:absolute;left:128px;top:300px;width:812px;height:580px;background:#FBF8F1;border:4px solid #C2551F;border-radius:20px;padding:56px;display:flex;flex-direction:column;justify-content:center;gap:24px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:96px;height:96px;color:#C2551F"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+<h3 style="font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">Customer entrance</h3>
+<p style="font-size:36px;line-height:1.3;color:#1E2933">Protected by <b>Cloudflare</b></p>
+<p style="font-size:28px;line-height:1.4;color:#55606B">The websites, for everyone</p>
+</div>
+<div style="position:absolute;left:980px;top:300px;width:812px;height:580px;background:#FBF8F1;border:4px solid #2E6DB4;border-radius:20px;padding:56px;display:flex;flex-direction:column;justify-content:center;gap:24px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:96px;height:96px;color:#2E6DB4"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/></svg>
+<h3 style="font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">Admin entrance</h3>
+<p style="font-size:36px;line-height:1.3;color:#1E2933">Protected by <b>Tailscale</b></p>
+<p style="font-size:28px;line-height:1.4;color:#55606B">SSH and my own tools, only my devices</p>
+</div>
+</section>
+</div></div><figcaption>Here’s the whole setup in one picture. Two entrances, nothing else. Customers come in through one entrance, protected by Cloudflare. I come in through the other, protected by Tailscale. They don’t depend on each other, so if the front desk is closed, I can still get into my own building to fix it. Let me show you each one.</figcaption></figure>
+<figure class="deck-slide" id="slide-6"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<div style="position:absolute;left:128px;top:840px;width:1000px;height:6px;background:#1E2933"></div>
+<p style="position:absolute;left:128px;top:856px;width:1000px;font-family:'Caveat', cursive;font-size:36px;color:#55606B;text-align:center">the street = the internet</p>
+<div style="position:absolute;left:330px;top:380px;width:400px;height:460px;background:#E6DCC6;border:4px solid #1E2933;border-radius:6px 6px 0 0;display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;padding:40px 40px 140px 40px">
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+</div>
+<p style="position:absolute;left:380px;top:316px;width:300px;font-family:'Caveat', cursive;font-size:40px;color:#1E2933;text-align:center">my server</p>
+<div style="position:absolute;left:470px;top:740px;width:90px;height:100px;background:#8A5A3B;border:4px solid #1E2933;border-radius:8px 8px 0 0"></div>
+<div style="position:absolute;left:630px;top:760px;width:60px;height:80px;background:#8A5A3B;border:4px solid #1E2933;border-radius:6px 6px 0 0"></div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:760px;top:600px;width:96px;height:96px;color:#A97A0F"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/></svg>
+<p style="position:absolute;left:740px;top:520px;width:300px;font-family:'Caveat', cursive;font-size:36px;color:#1E2933">the master key</p>
+<svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M760.0 680.0 L694.0 780.0" fill="none" stroke="#A97A0F" stroke-width="3.0" stroke-dasharray="9.0 6.0"/><polygon fill="#A97A0F" points="694.0,780.0 695.2,766.0 706.4,773.4"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:870px;top:740px;width:72px;height:72px;color:#C2551F"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:990px;top:740px;width:72px;height:72px;color:#C2551F"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+<p style="position:absolute;left:1170px;top:200px;width:622px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">SSH</p>
+<h2 style="position:absolute;left:1170px;top:248px;width:622px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">SSH is the master key</h2>
+<p style="position:absolute;left:1170px;top:470px;width:622px;font-size:32px;line-height:1.4;color:#55606B">Whoever gets in through the service door can do anything inside. So the real question is: who can even reach that door?</p>
+<p style="position:absolute;left:1170px;top:780px;width:622px;font-size:26px;font-weight:600;color:#1E2933;background:#E6DCC6;padding:12px 20px;border-radius:999px">SSH (port 22) = the master key</p>
+</section>
+</div></div><figcaption>SSH is the master key. With it you can do anything inside the building. So you don’t want a door for it on the street where every bot can try their keys.</figcaption></figure>
+<figure class="deck-slide" id="slide-7"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<div style="position:absolute;left:128px;top:840px;width:1000px;height:6px;background:#1E2933"></div>
+<p style="position:absolute;left:128px;top:856px;width:1000px;font-family:'Caveat', cursive;font-size:36px;color:#55606B;text-align:center">the street = the internet</p>
+<div style="position:absolute;left:330px;top:380px;width:400px;height:460px;background:#E6DCC6;border:4px solid #1E2933;border-radius:6px 6px 0 0;display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;padding:40px 40px 140px 40px">
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+<div style="height:70px;background:#F2C14E;border:3px solid #1E2933;border-radius:4px"></div>
+</div>
+<p style="position:absolute;left:380px;top:316px;width:300px;font-family:'Caveat', cursive;font-size:40px;color:#1E2933;text-align:center">my server</p>
+<div style="position:absolute;left:470px;top:740px;width:90px;height:100px;background:#8A5A3B;border:4px solid #1E2933;border-radius:8px 8px 0 0"></div>
+<div style="position:absolute;left:630px;top:760px;width:60px;height:80px;background:#B3A587;border:4px dashed #1E2933;border-radius:6px 6px 0 0"></div>
+<p style="position:absolute;left:740px;top:700px;width:200px;font-family:'Caveat', cursive;font-size:32px;color:#1E2933">bricked up</p>
+<div style="position:absolute;left:150px;top:440px;width:140px;height:90px;background:#DCE7F3;border:4px solid #1E2933;border-radius:6px"></div>
+<div style="position:absolute;left:135px;top:530px;width:170px;height:12px;background:#1E2933;border-radius:4px"></div>
+<p style="position:absolute;left:128px;top:340px;width:200px;font-family:'Caveat', cursive;font-size:32px;line-height:1.1;color:#2E6DB4">my laptop + phone only</p>
+<svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M220.0 546.0 V810.0 H626.0" fill="none" stroke="#2E6DB4" stroke-width="6.0" stroke-dasharray="18.0 12.0"/><polygon fill="#2E6DB4" points="626.0,810.0 607.6,820.1 607.6,799.9"/></svg>
+<p style="position:absolute;left:236px;top:740px;width:230px;font-family:'Caveat', cursive;font-size:30px;color:#2E6DB4">private corridor</p>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:870px;top:740px;width:72px;height:72px;color:#C2551F"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:990px;top:740px;width:72px;height:72px;color:#C2551F"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+<p style="position:absolute;left:1170px;top:200px;width:622px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">Tailscale</p>
+<h2 style="position:absolute;left:1170px;top:248px;width:622px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">I bricked up the service door</h2>
+<p style="position:absolute;left:1170px;top:470px;width:622px;font-size:32px;line-height:1.4;color:#55606B">The only way to the master-key door is now a private corridor. Only my own laptop and phone know it exists.</p>
+<p style="position:absolute;left:1170px;top:780px;width:622px;font-size:26px;font-weight:600;color:#1E2933;background:#E6DCC6;padding:12px 20px;border-radius:999px">Tailscale = a private network (VPN) for my devices</p>
+</section>
+</div></div><figcaption>I bricked up the service door. The only way in is a private corridor that only my laptop and phone know about. That’s Tailscale. The bots on the street don’t even see a door to try.</figcaption></figure>
+<figure class="deck-slide" id="slide-8"><div class="deck-scroll"><div class="deck-frame"><section style="background:#f5f1e8">
+  <div style="position:absolute; top:840px; left:128px; width:1000px; height:6px; display:flex; flex-direction:column; background:#1e2933">
+  </div>
+  <p style="position:absolute; top:856px; left:128px; width:1000px; font-family:Caveat, 'Brush Script MT', serif; font-size:36px; text-align:center; color:#55606b">the street = the internet</p>
+  <div style="position:absolute; top:380px; left:330px; width:400px; height:460px; display:grid; gap:28px; grid-template-columns:1fr 1fr 1fr; padding:40px 40px 140px; background:#e6dcc6; border:4px solid #1e2933; border-radius:6px 6px 0 0">
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+  </div>
+  <p style="position:absolute; top:316px; left:380px; width:300px; font-family:Caveat, 'Brush Script MT', serif; font-size:40px; text-align:center; color:#1e2933">my server</p>
+  <div style="position:absolute; top:740px; left:470px; width:90px; height:100px; display:flex; flex-direction:column; background:#8a5a3b; border:4px solid #1e2933; border-radius:8px 8px 0 0">
+  </div>
+  <div style="position:absolute; top:760px; left:630px; width:60px; height:80px; display:flex; flex-direction:column; background:#b3a587; border:4px dashed #1e2933; border-radius:6px 6px 0 0">
+  </div>
+  <div style="position:absolute; top:440px; left:150px; width:140px; height:90px; display:flex; flex-direction:column; background:#dce7f3; border:4px solid #1e2933; border-radius:6px">
+  </div>
+  <div style="position:absolute; top:530px; left:135px; width:170px; height:12px; display:flex; flex-direction:column; background:#1e2933; border-radius:4px">
+  </div>
+  <svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M220.0 546.0 V810.0 H626.0" fill="none" stroke="#2e6db4" stroke-width="6.0" stroke-dasharray="18.0 12.0"/><polygon fill="#2e6db4" points="626.0,810.0 607.6,820.1 607.6,799.9"/></svg>
+  <div style="position:absolute; top:620px; left:860px; width:230px; height:220px; display:flex; flex-direction:column; background:#dce7f3; border:4px solid #1e2933; border-radius:6px 6px 0 0">
+  </div>
+  <p style="position:absolute; top:520px; left:830px; width:290px; font-family:Caveat, 'Brush Script MT', serif; font-size:34px; line-height:1.1; text-align:center; color:#2e6db4">Cloudflare’s front desk</p>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute; top:680px; left:900px; width:72px; height:72px; color:#1e2933"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute; top:680px; left:1000px; width:72px; height:72px; color:#c2551f"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+  <svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M734.0 700.0 L856.0 700.0" fill="none" stroke="#2e6db4" stroke-width="14.0"/></svg>
+  <p style="position:absolute; top:620px; left:735px; width:130px; font-family:Caveat, 'Brush Script MT', serif; font-size:30px; line-height:1.1; text-align:center; color:#2e6db4">pipe from inside</p>
+  <p style="position:absolute; top:200px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#2e6db4">Cloudflare tunnel</p>
+  <h2 style="position:absolute; top:248px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.1; color:#1e2933">Customers go to the front desk</h2>
+  <p style="position:absolute; top:470px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:32px; line-height:1.4; color:#55606b">Customers never come to my building. They go to a front desk across the street. My building collects their messages through a pipe it opened from the inside.</p>
+  <p style="position:absolute; top:780px; left:1170px; width:622px; padding:12px 20px; font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:600; color:#1e2933; background:#e6dcc6; border-radius:256px">Front desk = reverse proxy ·&nbsp;<br>pipe = outbound tunnel</p>
+</section>
+</div></div><figcaption>Customers never come to my building. They go to Cloudflare’s front desk across the street, and my building picks up the messages through a pipe it opened from the inside. In tech terms: the front desk is a reverse proxy, a middleman that takes every request for me. The pipe is an outbound tunnel: my server calls out to Cloudflare and keeps the line open, so no door needs to be open for anyone to ring. Bots end up at the front desk too, and Cloudflare filters a lot of them out.</figcaption></figure>
+<figure class="deck-slide" id="slide-9"><div class="deck-scroll"><div class="deck-frame"><section style="background:#f5f1e8">
+  <div style="position:absolute; top:840px; left:128px; width:1000px; height:6px; display:flex; flex-direction:column; background:#1e2933">
+  </div>
+  <p style="position:absolute; top:856px; left:128px; width:1000px; font-family:Caveat, 'Brush Script MT', serif; font-size:36px; text-align:center; color:#55606b">the street = the internet</p>
+  <div style="position:absolute; top:380px; left:330px; width:400px; height:460px; display:grid; gap:28px; grid-template-columns:1fr 1fr 1fr; padding:40px 40px 140px; background:#e6dcc6; border:4px solid #1e2933; border-radius:6px 6px 0 0">
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+    <div style="height:70px; display:flex; flex-direction:column; background:#f2c14e; border:3px solid #1e2933; border-radius:4px">
+    </div>
+  </div>
+  <p style="position:absolute; top:316px; left:380px; width:300px; font-family:Caveat, 'Brush Script MT', serif; font-size:40px; text-align:center; color:#1e2933">my server</p>
+  <div style="position:absolute; top:740px; left:470px; width:90px; height:100px; display:flex; flex-direction:column; background:#e6dcc6; border:4px dashed #1e2933; border-radius:8px 8px 0 0">
+  </div>
+  <div style="position:absolute; top:760px; left:630px; width:60px; height:80px; display:flex; flex-direction:column; background:#b3a587; border:4px dashed #1e2933; border-radius:6px 6px 0 0">
+  </div>
+  <div style="position:absolute; top:440px; left:150px; width:140px; height:90px; display:flex; flex-direction:column; background:#dce7f3; border:4px solid #1e2933; border-radius:6px">
+  </div>
+  <div style="position:absolute; top:530px; left:135px; width:170px; height:12px; display:flex; flex-direction:column; background:#1e2933; border-radius:4px">
+  </div>
+  <svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M220.0 546.0 V810.0 H626.0" fill="none" stroke="#2e6db4" stroke-width="6.0" stroke-dasharray="18.0 12.0"/><polygon fill="#2e6db4" points="626.0,810.0 607.6,820.1 607.6,799.9"/></svg>
+  <div style="position:absolute; top:620px; left:860px; width:230px; height:220px; display:flex; flex-direction:column; background:#dce7f3; border:4px solid #1e2933; border-radius:6px 6px 0 0">
+  </div>
+  <p style="position:absolute; top:520px; left:830px; width:290px; font-family:Caveat, 'Brush Script MT', serif; font-size:34px; line-height:1.1; text-align:center; color:#2e6db4">Cloudflare’s front desk</p>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute; top:680px; left:900px; width:72px; height:72px; color:#1e2933"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+  <svg viewBox="0 0 1920 1080" aria-hidden="true" style="position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none"><path d="M734.0 700.0 L856.0 700.0" fill="none" stroke="#2e6db4" stroke-width="14.0"/></svg>
+  <p style="position:absolute; top:640px; left:380px; width:300px; font-family:Caveat, 'Brush Script MT', serif; font-size:40px; font-weight:700; text-align:center; color:#c2551f">knock knock… nothing</p>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute; top:770px; left:760px; width:64px; height:64px; color:#c2551f"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+  <p style="position:absolute; top:200px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#2e6db4">The result</p>
+  <h2 style="position:absolute; top:248px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.1; color:#1e2933">No doors on the street</h2>
+  <p style="position:absolute; top:470px; left:1170px; width:622px; font-family:'DM Sans', Arial, sans-serif; font-size:32px; line-height:1.4; color:#55606b">The front door is gone too: websites come in through the pipe. Inside, every shop’s door opens onto the hallway, not the street. Knock on the building and nothing answers.</p>
+  <p style="position:absolute; top:780px; left:1170px; width:622px; padding:12px 20px; font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:600; color:#1e2933; background:#e6dcc6; border-radius:256px">Firewall: no open ports ·&nbsp;<br>apps listen on localhost</p>
+</section>
+</div></div><figcaption>So now there are no doors on the street at all. The front door is gone, websites come in through the pipe. And inside, every shop’s door opens onto the hallway, not the street. If a bot knocks on the building directly, nothing answers.</figcaption></figure>
+<figure class="deck-slide" id="slide-10"><div class="deck-scroll"><div class="deck-frame"><section style="background:#ede6d6">
+  <p style="position:absolute; top:128px; left:128px; width:1664px; font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#2e6db4">Where do you put your apps?</p>
+  <h2 style="position:absolute; top:172px; left:128px; width:1664px; font-family:'DM Sans', Arial, sans-serif; font-size:56px; font-weight:700; line-height:1.1; color:#1e2933">Hotel room, or an empty building?</h2>
+  <div style="position:absolute; top:290px; left:128px; width:528px; display:flex; flex-direction:column; gap:18px; padding:40px; background:#fbf8f1; border:3px solid #1e2933; border-radius:16px">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:64px; height:64px; color:#55606b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#55606b">Vercel · Heroku · Fly</p>
+    <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:40px; font-weight:700; line-height:1.15; color:#1e2933">A hotel room</h3>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:28px; line-height:1.4; color:#55606b">Bring only your suitcase: your code. Everything else is done for you, but you pay per room and follow their rules.</p>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:26px; line-height:1.4; color:#1e2933"><b>Doors:</b> they guard them.</p>
+  </div>
+  <div style="position:absolute; top:290px; left:696px; width:528px; display:flex; flex-direction:column; gap:18px; padding:40px; background:#fbf8f1; border:4px solid #2e6db4; border-radius:16px">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:64px; height:64px; color:#2e6db4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#2e6db4">Hetzner (me)</p>
+    <h3 style="font-family:'DM Sans', Arial, sans-serif; font-size:40px; font-weight:700; line-height:1.15; color:#1e2933">An empty building</h3>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:28px; line-height:1.4; color:#55606b">No services, one fixed low rent. Room for 20 shops. Everything inside I do myself.</p>
+    <p style="font-family:'DM Sans', Arial, sans-serif; font-size:26px; line-height:1.4; color:#1e2933"><b>Doors:</b> I guard them.</p>
+  </div>
+</section>
+</div></div><figcaption>Where do you put your apps? Vercel, Heroku or Fly are like a hotel room: you bring only your suitcase, your code, and everything else is done for you, doors included. But you pay per room and follow their rules. AWS is an office with services à la carte: you rent the space and order reception, security and cleaning as extras. Every service you set up yourself, and every one is billed by use, so the bill is hard to predict. Hetzner is an empty building: no services at all, one fixed low rent, room for all my shops. I do everything myself, including guarding the doors. That’s what this deck is about. Is that self-hosting? It’s not my own hardware, so call it self-managed: my building, my rules.</figcaption></figure>
+<figure class="deck-slide" id="slide-11"><div class="deck-scroll"><div class="deck-frame"><section style="background:#1E2933;color:#F5F1E8;font-family:'DM Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#F2C14E">Q&amp;A</p>
+<h1 style="font-size:88px;font-weight:700;line-height:1.12;color:#F5F1E8">The questions people asked me</h1>
+<p style="font-size:36px;line-height:1.4;color:#C9D2DB">How do they find me? Can't they just break in? Isn't the problem just moved?</p>
+</section>
+</div></div><figcaption>I got a lot of questions while explaining this setup. Here are the ones that came up most, with short answers.</figcaption></figure>
+<figure class="deck-slide" id="slide-12"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<p style="position:absolute;left:128px;top:128px;width:1664px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">Q&amp;A · 1 of 3</p>
+<h2 style="position:absolute;left:128px;top:172px;width:1664px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">How do they find me?</h2>
+<div style="position:absolute;left:128px;top:290px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">An IP address is public, but how do they find mine?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">Bots knock on every address on the internet, all of them, in minutes. Registers also show which addresses belong to Hetzner. So assume they find the building. What matters is that it doesn't answer.</p>
+</div>
+<div style="position:absolute;left:128px;top:500px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">Why is the front door number 443?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">Just an agreement. Every browser knocks on 443 for https. In my setup that door is at Cloudflare's front desk, not at my building.</p>
+</div>
+<div style="position:absolute;left:128px;top:670px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">And the back door, 22? What is SSH?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">SSH = Secure Shell: a command line inside the server, so the master key. Port 22 is also just an agreement, which is why every bot tries it first.</p>
+</div>
+</section>
+</div></div><figcaption>How do they find my server? An IP address is like a street address. Bots scan the entire internet, every address, in a few minutes, with tools like masscan; sites like Shodan publish the results. Public registers show which address blocks belong to Hetzner, and old DNS records or certificate logs can leak an address too. So don't count on hiding the address. The protection is that the building doesn't answer. Why port 443? Pure agreement. Netscape asked for a number for secure web traffic in the nineties and got 443. Every browser knocks there for https. In my setup, port 443 is open at Cloudflare, not on my server. SSH stands for Secure Shell. It was invented in 1995 by a Finnish researcher after his university network was hacked and passwords were stolen. He asked for port 22, right between Telnet (23) and FTP (21), and got it. Through SSH you get a command line inside the server, so it's the master key. Because everyone knows SSH lives on 22, an open port 22 gets its first bot login attempts within minutes.</figcaption></figure>
+<figure class="deck-slide" id="slide-13"><div class="deck-scroll"><div class="deck-frame"><section style="background:#EDE6D6;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<p style="position:absolute;left:128px;top:128px;width:1664px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">Q&amp;A · 2 of 3</p>
+<h2 style="position:absolute;left:128px;top:172px;width:1664px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">Can't they just break in?</h2>
+<div style="position:absolute;left:128px;top:290px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">Can bots crack SSH? If not, why hide the door?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">With a key instead of a password: not by guessing. But every few years someone finds a flaw in the lock itself (2024: twice). Then every visible door gets tried within hours. A door that isn't there can't be tried.</p>
+</div>
+<div style="position:absolute;left:128px;top:540px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">Why can't anyone see the Tailscale door?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">It has an address that only exists inside my private network. On the public address the admin door stays silent: knock, and you hear nothing.</p>
+</div>
+<div style="position:absolute;left:128px;top:710px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">What's a forgotten door, and what's a bad lock?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">Forgotten door: a test database left open. Now it's simply unreachable. Bad lock: a live app with a weak login. That one is still my job.</p>
+</div>
+</section>
+</div></div><figcaption>Can bots crack SSH? They try passwords like root/123456 all day. With a weak password, that can work. With an SSH key and password login switched off, guessing is hopeless: a key is like a password hundreds of characters long. So why hide the door? Because the risk isn't someone guessing the key, it's a flaw in the lock itself. In 2024 a bug in OpenSSH, called regreSSHion, could let attackers in on some Linux servers without logging in. The same year someone was caught smuggling a backdoor into a library SSH depended on, just before it reached most systems. When that happens, every visible door gets tried on day one. Mine isn't there. Why can't anyone see the Tailscale door? Tailscale gives my server a second address in a reserved range that leads nowhere on the public internet; it only works inside my own network. On the public address, the firewall doesn't even say no; it stays silent. And Tailscale itself only answers devices that carry one of my keys. Forgotten door vs bad lock: a forgotten door is something you didn't mean to expose, like a test database or an old admin page. With no doors on the street, it simply can't be reached. A bad lock is a shop that is meant to be public but has a weak login, for example no limit on login attempts. Cloudflare sends every customer through, including bad ones, so that lock is still my job.</figcaption></figure>
+<figure class="deck-slide" id="slide-14"><div class="deck-scroll"><div class="deck-frame"><section style="background:#F5F1E8;color:#1E2933;font-family:'DM Sans', Arial, sans-serif">
+<p style="position:absolute;left:128px;top:128px;width:1664px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E6DB4">Q&amp;A · 3 of 3</p>
+<h2 style="position:absolute;left:128px;top:172px;width:1664px;font-size:56px;font-weight:700;line-height:1.1;color:#1E2933">Isn't the problem just moved?</h2>
+<div style="position:absolute;left:128px;top:290px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">Isn't Cloudflare now the weak spot?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">Partly moved, mostly smaller. Ten doors to guard became one, guarded by a company that does nothing else. The trade-off: Cloudflare sees the traffic pass.</p>
+</div>
+<div style="position:absolute;left:128px;top:500px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">If everything goes through Cloudflare, why Tailscale?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">Cloudflare handles customers, Tailscale handles me. Separate, so if the front desk is down I can still get in to fix it.</p>
+</div>
+<div style="position:absolute;left:128px;top:670px;width:1664px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2;color:#1E2933">What are a reverse proxy and an outbound tunnel?</h3>
+<p style="font-size:28px;line-height:1.4;color:#55606B">Reverse proxy = the front desk that takes requests and passes them on. Outbound tunnel = a pipe my building opened from the inside.</p>
+</div>
+</section>
+</div></div><figcaption>Isn't the problem just moved? Partly, but it got much smaller. Only the shops I chose are reachable, so a forgotten door can't be found. Floods of traffic hit Cloudflare, not me, and the front desk filters known bots. The master key isn't moved at all; it's gone from the street. What I trade for that: Cloudflare sees the traffic pass, so I trust them with it. And a bad lock in one of my shops is still a bad lock. Why still Tailscale? Cloudflare checks visitors to my websites; it doesn't guard my admin access. I could put my admin tools behind Cloudflare too, but I keep them apart on purpose: if Cloudflare or the tunnel breaks, I can still reach my own server through Tailscale to fix it. Reverse proxy: a receptionist who takes every request at the desk and walks it to the right shop, so visitors never talk to the shop directly. Outbound tunnel: instead of opening a door for visitors, my server calls out to Cloudflare and keeps that line open. Requests come back through that line. Nothing on my side waits for someone to knock.</figcaption></figure>
+        </section>
+
+        <section class="panel deck-close">
+            <h2>Want this on your own server?</h2>
+            <p>The Agent VPS Playbook is one file your AI agent follows to set this up. You approve the risky steps.</p>
+            <a href="/playbooks/agent-vps/" class="cta-button" data-umami-event="deck-server-security-close">See the playbook</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-company">
+                <p class="footer-legal-name">Hinano Products</p>
+                <p class="footer-trade-name">Trading as <strong>AI Tigers</strong></p>
+                <p>KVK: 94675090</p>
+                <p>BTW: NL866855932B01</p>
+                <p>Amstelveen, Netherlands</p>
+            </div>
+            <div class="footer-links">
+                <a href="../../privacy.html">Privacy Policy</a>
+                <a href="../../terms.html">Terms &amp; Conditions</a>
+            </div>
+            <p class="footer-built">Also built by us: <a href="https://www.wheredoesthea380fly.com/">Where Does The A380 Fly</a>, a live map of every A380 route</p>
+            <p class="footer-copyright">&copy; 2026 AI Tigers. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Slides are a fixed 1920x1080 canvas; scale each one to its frame.
+        var ro = new ResizeObserver(function (entries) {
+            entries.forEach(function (e) { e.target.style.setProperty('--s', e.contentRect.width / 1920); });
+        });
+        document.querySelectorAll('.deck-frame').forEach(function (f) { ro.observe(f); });
+    </script>
+</body>
+
+</html>

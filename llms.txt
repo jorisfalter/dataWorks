@@ -5,4 +5,6 @@
 ## Playbooks
 
 - [Agent VPS Playbook](https://www.ai-tigers.com/playbooks/agent-vps/for-agents.md): €19. One Markdown file an agent follows to lock down a Linux VPS (Tailscale, Cloudflare Tunnel, Docker, updates, backups). Summary for agents.
+- [Server security, simply](https://www.ai-tigers.com/playbooks/server-security/): free deck. How a server with no open ports works, explained with one building, plus Q&A.
+- [How AI changed my spending](https://www.ai-tigers.com/playbooks/ai-spending/): free deck. What I stopped paying for and where the money goes now.
 - [All playbooks](https://www.ai-tigers.com/playbooks/)
