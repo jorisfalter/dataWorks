@@ -362,15 +362,3 @@
 }
 .deck-close { text-align: center; }
 .deck-close p { color: #555; margin-bottom: 1.5rem; }
-
-/* Index: video list */
-.videos { list-style: none; margin: 0; padding: 0; }
-.videos li {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    border-top: 1px solid #e5e5e5;
-    padding: 0.8rem 0;
-}
-.videos a { color: #222; font-weight: 600; }
-.videos span { color: #777; flex: none; }
