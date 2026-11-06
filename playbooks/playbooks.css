@@ -326,7 +326,6 @@
     --s: 0.5;
     position: relative;
     width: 100%;
-    min-width: 640px; /* below this the slide text is unreadable; the frame scrolls instead */
     aspect-ratio: 16 / 9;
     overflow: hidden;
 }
