@@ -11,8 +11,8 @@
     <meta property="og:description" content="What I stopped paying for, what I still pay for, and where the money goes now. A free slide deck.">
     <meta property="og:url" content="https://www.ai-tigers.com/playbooks/ai-spending/">
     <link rel="icon" type="image/x-icon" href="../../images/brand/logo.ico">
-    <link rel="stylesheet" href="../../styles.css?v=20261106d">
-    <link rel="stylesheet" href="../playbooks.css?v=20261106d">
+    <link rel="stylesheet" href="../../styles.css?v=20261106e">
+    <link rel="stylesheet" href="../playbooks.css?v=20261106e">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap">
@@ -325,6 +325,7 @@
                 f.title = a.getAttribute('aria-label');
                 f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
                 f.allowFullscreen = true;
+                f.referrerPolicy = 'strict-origin-when-cross-origin'; // YouTube refuses to play without a referrer (error 153)
                 f.className = 'yt';
                 a.replaceWith(f);
             });
